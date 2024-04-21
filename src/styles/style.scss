@@ -60,14 +60,20 @@ header{
                 font-size: 1.1rem;
                 transition: 0.5s;
                 &:last-child{
+                    display: flex;
+                    gap: 5px;
                     margin-left: auto;
                     margin-right: 25%;
                     font-style: italic;
                     font-weight: 500;
+                    img{
+                        width: 28px;                  
+                    }
                 }
                 &:hover{
                     color: rgba(0, 0, 0, 0.551);
                 }
+                
             }                             
         }
     }   
@@ -117,8 +123,7 @@ header{
     .aboutMe-container{
         display: flex;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center;       
         .aboutMe-wrapper{
             width: 50%;
             h2{
@@ -152,9 +157,12 @@ header{
     }
     
     .treatments-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
         h3{
-            text-align: center;
-            margin-top: 5%;
+            text-align: center;          
             font-style: italic;
             font-size: 4rem;
         }

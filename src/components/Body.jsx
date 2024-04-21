@@ -5,6 +5,10 @@ import one from '../assets/images/one.jpg';
 import two from '../assets/images/two.jpg';
 import three from '../assets/images/three.jpg';
 import closeUp from '../assets/images/closeUp.png';
+import sweden from '../assets/images/sweden.png';
+import oils from '../assets/images/oils.png';
+import face from '../assets/images/face.png';
+import rekamot from '../assets/images/rekamot.png';
 
 const Body = () => {
   return (
@@ -50,8 +54,41 @@ const Body = () => {
       </section>
 
       <section className='treatments-container'>
-        <div className='treatments-wrapper'>
-          <h3>סוגי טיפולים</h3>
+        <h3>סוגי טיפולי מגע</h3>
+        <div className='treatments-wrapper'>          
+          <hr />
+          <div className='treatment-card'>
+            <img src={sweden} alt="" />
+            <h4>עיסוי שוודי הוליסטי</h4>
+            <p>שיטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+                הרפיה ושחרור שרירים, שיפור זרימת הדם
+                , שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה 
+            </p>
+          </div>
+          <div className='treatment-card'>
+            <img src={rekamot} alt="" />
+            <h4>עיסוי רקמות עמוק ושיקום</h4>
+            <p>שיטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+                הרפיה ושחרור שרירים, שיפור זרימת הדם
+                , שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה 
+            </p>
+          </div>
+          <div className='treatment-card'>
+            <img src={oils} alt="" />
+            <h4>עיסוי ארומתרפי</h4>
+            <p>שיטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+                הרפיה ושחרור שרירים, שיפור זרימת הדם
+                , שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה 
+            </p>
+          </div>
+          <div className='treatment-card'>
+            <img src={face} alt="" />
+            <h4>עיסוי פנים יפני קובידו</h4>
+            <p>שיטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+                הרפיה ושחרור שרירים, שיפור זרימת הדם
+                , שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה 
+            </p>
+          </div>
         </div>
       </section>   
     </main>

@@ -127,7 +127,7 @@ header{
         align-items: center;
         justify-content: center;       
         .aboutMe-wrapper{
-            width: 50%;
+            width: 60%;
             h2{
                 text-align: center;
                 margin-top: 5%;
@@ -143,30 +143,80 @@ header{
                 gap: 35px;
                 img{
                     width: 280px;
+                    height: 250px;
                     border-radius: 50%;
                     transition: 0.5s;
                     cursor: pointer;
                     &:hover{
                         border-radius: 15%;
                     }
+                    @include laptop{
+                        width: 170px;
+                        height: 170px;
+                        justify-content: center; 
+                    }
                 }
                 p{
                     direction: rtl;
-                    font-size: 1.4rem;
+                    font-size: 1.2700rem;
+                    @include laptop{
+                        font-size: 1rem;
+                    }
                 }
             }
         }
     }
     
-    .treatments-container{
+    .treatments-container{       
+        margin-top: 5%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 5%;
         h3{
             text-align: center;          
             font-style: italic;
             font-size: 4rem;
+            margin-bottom: 1%;
+            letter-spacing: 1px;
+            color: rgb(93, 92, 92);
+        }
+        
+        .treatments-wrapper{
+            width: 80%; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            hr{
+                width: 100%;
+                color: black;
+                margin-top: 0.5%;  
+                margin-bottom: 2%;        
+            }
+            .treatment-card{
+                width: 23%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                border: $greenColor 2px solid;
+                border-radius: 20px;
+                padding: 5px;
+                img{
+                    margin-top: 1.2%; 
+                    width: 60px;
+                    background-color: $greenColor;
+                    padding: 8px;
+                    border-radius: 50%;
+                    border: $lightBlack 2px solid;
+                }
+                h4{
+
+                }
+                p{
+                    text-align: center;
+                }
+            }            
         }
     }
 }

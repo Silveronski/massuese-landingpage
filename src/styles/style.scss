@@ -95,21 +95,23 @@ header{
                 top: 45%;             
                 h1{
                     font-size: 3rem;
+                    margin-bottom: 0;
                 }
                 p{
+                    margin-top: 2px;
                     font-size: 1.5rem;
                     font-weight: 600;
                 }
                 button{
                     background: transparent;
                     color: white;
-                    padding: 5px 25px;
+                    padding: 5px 45px;
                     outline: none;
                     border: $greenColor 2.5px solid;
-                    border-radius: 15%;
+                    border-radius: 25px;
                     font-size: 1.2rem;
-                    transition: 0.3s;
-                    margin-top: 0.8%;
+                    transition: 0.5s;
+                    margin-top: 0.5%;
                     font-weight: 600;
                     &:hover{
                         background-color: $greenColor;

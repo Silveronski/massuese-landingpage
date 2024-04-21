@@ -1,6 +1,6 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Contact from '../components/Contact'
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Contact from '../components/Contact';
 import Body from '../components/Body';
 
 const Home = () => {

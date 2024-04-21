@@ -14,7 +14,7 @@ const Body = () => {
               <img src={one}/>           
               <Carousel.Caption>
                 <h1>אנה לב</h1>
-                <p>עיסוי שוודי הוליסטי | ארומתרפיה</p>
+                <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
                 <button>קבע/י תור</button>
               </Carousel.Caption>
           </Carousel.Item>
@@ -23,7 +23,7 @@ const Body = () => {
               <img src={two}/>   
               <Carousel.Caption>
                 <h1>אנה לב</h1>
-                <p>עיסוי רקמות עמוק | עיסוי פנים יפני קובידו</p>
+                <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
                 <button>קבע/י תור</button>
               </Carousel.Caption>     
           </Carousel.Item>
@@ -32,7 +32,7 @@ const Body = () => {
               <img src={three}/>    
               <Carousel.Caption>
                 <h1>אנה לב</h1>
-                <p>פרחי באך | רוקחות טבעית</p>
+                <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
                 <button>קבע/י תור</button>
               </Carousel.Caption>     
           </Carousel.Item>

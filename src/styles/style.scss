@@ -1,0 +1,162 @@
+$greenColor:#c0e4b4;
+$lightBlack:rgb(57, 56, 56);
+
+@mixin mobile{
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+    &::-webkit-scrollbar {
+        width: 0.6em; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $lightBlack;       
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $greenColor;            
+    }
+}
+
+html{
+    font-family: Rubik;
+}
+
+header{
+    .main-navbar{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background-color: $greenColor;    
+        ul{           
+            margin-left: 20%;
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+            list-style: none;
+            gap: 0.8rem;             
+            li{              
+                padding: 0.5rem;
+                cursor: pointer;
+                font-size: 1.1rem;
+                transition: 0.5s;
+                &:last-child{
+                    margin-left: auto;
+                    margin-right: 25%;
+                    font-style: italic;
+                    font-weight: 500;
+                }
+                &:hover{
+                    color: rgba(0, 0, 0, 0.551);
+                }
+            }                             
+        }
+    }   
+}
+
+.site-container{
+    .carousel{      
+        width: 100%;
+        height: 100vh;
+        user-select: none;
+        .carousel-item{           
+            position: relative;
+            height: 100vh;
+            img{           
+                width: 100vw; 
+            }
+            .carousel-caption{
+                position: absolute;
+                top: 45%;             
+                h1{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                button{
+                    background: transparent;
+                    color: white;
+                    padding: 5px 25px;
+                    outline: none;
+                    border: $greenColor 2.5px solid;
+                    border-radius: 15%;
+                    font-size: 1.2rem;
+                    transition: 0.3s;
+                    margin-top: 0.8%;
+                    font-weight: 600;
+                    &:hover{
+                        background-color: $greenColor;
+                        color: $lightBlack;
+                    }
+                }
+            }
+        }
+    } 
+    
+    .aboutMe-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .aboutMe-wrapper{
+            width: 50%;
+            h2{
+                text-align: center;
+                margin-top: 5%;
+                font-size: 2rem;
+                font-weight: normal;
+                font-style: italic;
+                span:last-child{
+                    color: $greenColor;
+                }
+            }
+            .content{
+                display: flex;
+                gap: 35px;
+                img{
+                    width: 280px;
+                    border-radius: 50%;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    &:hover{
+                        border-radius: 15%;
+                    }
+                }
+                p{
+                    direction: rtl;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+    .treatments-container{
+        h3{
+            text-align: center;
+            margin-top: 5%;
+            font-style: italic;
+            font-size: 4rem;
+        }
+    }
+}

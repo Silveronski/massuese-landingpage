@@ -1,0 +1,43 @@
+$greenColor:#c0e4b4;
+$lightBlack:rgb(57, 56, 56);
+$grayish: rgb(93, 92, 92);
+
+@mixin mobile{
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+    &::-webkit-scrollbar {
+        width: 0.6em; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $lightBlack;       
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $greenColor;            
+    }
+}
+
+html{
+    font-family: Rubik;
+}

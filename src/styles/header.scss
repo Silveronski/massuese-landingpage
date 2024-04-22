@@ -1,0 +1,37 @@
+header{
+    .main-navbar{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background-color: $greenColor;    
+        ul{           
+            margin-left: 20%;
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+            list-style: none;
+            gap: 0.8rem;             
+            li{              
+                padding: 0.5rem;
+                cursor: pointer;
+                font-size: 1.1rem;
+                transition: 0.5s;
+                &:last-child{
+                    display: flex;
+                    gap: 5px;
+                    margin-left: auto;
+                    margin-right: 25%;
+                    font-style: italic;
+                    font-weight: 500;
+                    img{
+                        width: 28px;                  
+                    }
+                }
+                &:hover{
+                    color: rgba(0, 0, 0, 0.551);
+                }
+                
+            }                             
+        }
+    }   
+}

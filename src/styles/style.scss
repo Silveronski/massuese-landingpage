@@ -15,7 +15,7 @@ $grayish: rgb(93, 92, 92);
 }
 
 @mixin laptop{
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1400px) {
         @content;
     }
 }
@@ -133,7 +133,7 @@ header{
             h2{
                 text-align: center;
                 margin-top: 7%;
-                font-size: 2.2rem;
+                font-size: 2.4rem;
                 font-weight: normal;
                 font-style: italic;
                 color: $grayish;
@@ -157,16 +157,17 @@ header{
                     @include laptop{
                         width: 170px;
                         height: 170px;
-                        align-self: auto;
+                        align-self: center;
                         margin-top: 0.3rem;                         
                     }
                 }
                 p{
                     direction: rtl;
                     font-size: 1.4rem;
-                    padding-left: 1.1rem;
+                    padding-left: 2.5rem;
+                    padding-right: 2.5rem;
                     @include laptop{
-                        font-size: 0.9250rem;
+                        font-size: 1.1500rem;
                         padding-left: 0.5rem;
                     }
                 }

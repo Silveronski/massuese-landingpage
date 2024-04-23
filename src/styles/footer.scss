@@ -8,7 +8,7 @@ footer{
         align-items: center;
         justify-content: space-evenly; 
         @include mobile{
-            height: 70vh;
+            height: 750px;
             margin-top: 5rem;            
         }
         .contact-us-wrapper{
@@ -24,9 +24,8 @@ footer{
                 width: 100%;
             }
             @include mobile{
-                flex-direction: column;
-                height: auto;  
-                gap: 20px;         
+                flex-direction: column;  
+                gap: 20px;       
             }
             div{
                 width: 100%;

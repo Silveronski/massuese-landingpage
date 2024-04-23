@@ -19,7 +19,7 @@ footer{
             display: flex;
             justify-content: space-evenly;
             flex-direction: row-reverse; 
-            align-items: center;
+            align-items: center;       
             @include laptop{
                 width: 100%;
             }

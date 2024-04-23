@@ -3,6 +3,7 @@
 @import './footer.scss';
 
 .site-container{
+    position: relative;
     @include mobile{
         overflow-x: hidden;
     }
@@ -252,5 +253,17 @@
             }            
         }
     }
-}
 
+    .whatsapp-icon{
+        position: fixed;
+        right: 1%;
+        bottom: 2%;
+        width: 45px;
+        transition: 0.3s;
+        cursor: pointer;
+        z-index: 999;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}

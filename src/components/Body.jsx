@@ -10,7 +10,7 @@ import TreatmentCard from './TreatmentCard';
 
 const Body = () => {
   return (
-    <main className='site-container'> 
+    <main> 
 
       <CarouselComp/>
       
@@ -61,7 +61,8 @@ const Body = () => {
           />
 
         </div>
-      </section>   
+      </section> 
+
     </main>
   )
 }

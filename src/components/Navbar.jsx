@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
     <header>
         <nav className='main-navbar'>
+            <img className='hamburger' src={hamburger} alt="" />
             <ul>
-                <li><img className='hamburger' src={hamburger} alt="" /></li>
                 <li>צור קשר</li>
                 <li>טיפולים</li>
                 <li>עליי</li>                    

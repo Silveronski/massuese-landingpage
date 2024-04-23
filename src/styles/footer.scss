@@ -7,6 +7,10 @@ footer{
         display: flex;
         align-items: center;
         justify-content: space-evenly; 
+        @include mobile{
+            height: 70vh;
+            margin-top: 5rem;            
+        }
         .contact-us-wrapper{
             padding-top: 1%;
             width: 75%;
@@ -18,6 +22,11 @@ footer{
             align-items: center;
             @include laptop{
                 width: 100%;
+            }
+            @include mobile{
+                flex-direction: column;
+                height: auto;  
+                gap: 20px;         
             }
             div{
                 width: 100%;
@@ -69,6 +78,11 @@ footer{
                     @include laptop{
                         width: 95%;                      
                         margin: 5px 20px;
+                    }
+                    @include mobile{
+                        margin-top: 3%;
+                        width: 90%;
+                        height: 200px;            
                     }
                 }
             }  

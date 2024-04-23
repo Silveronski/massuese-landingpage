@@ -7,12 +7,14 @@
         width: 100%;
         height: 100vh;
         user-select: none;
+        position: relative;
         .carousel-item{           
             position: relative;
             height: 100vh;
             img{           
-                width: 100vw; 
-            }
+                width: 100%;
+                // height: 100svh; whta height do i give ??
+            }          
             .carousel-caption{
                 position: absolute;
                 top: 45%;             
@@ -52,6 +54,12 @@
         justify-content: center;       
         .aboutMe-wrapper{
             width: 60%;
+            @include mobile{
+                width: 90%;              
+            }
+            @include tablet{
+                width: 80%;              
+            }
             h2{
                 text-align: center;
                 margin-top: 7%;
@@ -66,6 +74,10 @@
             .content{
                 display: flex;
                 gap: 35px;
+                @include mobile{
+                    flex-direction: column; 
+                    gap: 25px;               
+                }
                 img{
                     width: 250px;
                     height: 250px;
@@ -117,11 +129,17 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            @include mobile{
+                width: 100%;                
+            }
             hr{
                 width: 100%;
                 color: black;
                 margin-top: 0.5%;  
-                margin-bottom: 2%;        
+                margin-bottom: 2%;
+                @include mobile{
+                    margin-bottom: 5%;              
+                }        
             }
             .treatment-card{
                 position: relative;
@@ -145,8 +163,9 @@
                     }
                 }
                 @include mobile{
-                    width: 100%;                
+                    width: 85%;                
                 }
+               
                 &:hover{
                     &::after{
                         transform: scale(1,1);

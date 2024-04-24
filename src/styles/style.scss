@@ -13,38 +13,37 @@
         user-select: none;
         position: relative;
         @include laptop{
-            height: 90vh;
+            height: $laptopCarouselHeight;
         }
         @include tablet{
-            height: 70vh;
+            height: $tabletCarouselHeight;
         }
         @include mobile{
-            height: 100vh;
+            height: $mobileCarouselHeight;
         }       
         .carousel-item{           
             position: relative;
             height: 100vh;
             @include laptop{
-                height: 90vh;
+                height: $laptopCarouselHeight;
             }
             @include tablet{
-                height: 70vh;
+                height: $tabletCarouselHeight;
             }
             @include mobile{
-                height: 100vh;                            
+                height: $mobileCarouselHeight;                            
             }
             img{           
                 width: 100%;
+                object-fit: cover;
                 @include laptop{
-                    object-fit: cover; 
-                    height: 90vh;                 
+                    height: $laptopCarouselHeight;                                   
                 }
                 @include tablet{
-                    height: 70vh;
+                    height: $tabletCarouselHeight;              
                 }
                 @include mobile{
-                    height: 100vh; 
-                    object-fit: cover;                  
+                    height: $mobileCarouselHeight;                                    
                 }
             }          
             .carousel-caption{
@@ -259,6 +258,84 @@
                     transition: 0.3s;                   
                 }
             }            
+        }
+    }
+
+    .my-products-container{
+        margin-top: 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4{
+            text-align: center;
+            font-size: 2.4rem;
+            font-style: italic;
+            color: $grayish;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+        .my-products-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            margin-top: 1%;
+            @include laptop{
+                width: 80%;
+            }
+            hr{
+                margin-top: 0.5%;  
+                width: 75%;
+                @include laptop{
+                    width: 80%;
+                }                  
+            }
+            .my-product{
+                display: flex;  
+                margin: 1.5rem auto;
+                align-items:stretch;
+                width: 75%;  
+                @include laptop{
+                    width: 80%;
+                }    
+                // border: $greenColor 2px solid;
+                // border-radius: 20px;
+                // box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.559);    
+                &:nth-child(odd){
+                    img{
+                        &:hover{
+                            rotate: 10deg;
+                        }
+                    }
+                }
+                &:nth-child(even){
+                    img{
+                        &:hover{
+                            rotate: -10deg;
+                        }
+                    }
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: right;
+                    padding: 1rem 2rem;
+                    h5{
+                       margin-bottom: 2%;
+                    }
+                    p{
+                        direction: rtl;                                        
+                    }            
+                }
+                img{
+                    width: 250px;
+                    height: 250px;
+                    margin: auto 1.5rem;
+                    padding: 1rem;
+                    transition: 1s;                 
+                }
+            }
         }
     }
 

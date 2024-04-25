@@ -1,18 +1,41 @@
 header{
+    .hamburger{
+        display: none;
+        position: fixed;
+        width: 30px;
+        top: 1.5%;
+        left: 1.5%;
+        z-index: 999;
+        @include mobile{
+            display: inline-block;
+        }  
+    }   
     .main-navbar{
         position: fixed;
         z-index: 10;
         width: 100%;
-        background-color: $greenColor;
-        .hamburger{
+        background-color: $greenColor;       
+        @keyframes slideInFromAbove {
+            0%{
+                top: -100%;
+            }
+            100%{
+                top: 0%;
+            }
+        } 
+        @keyframes slideInFromDown {
+            0%{
+                top: 0%;
+            }
+            100%{
+                top: -100%;
+            }
+        } 
+        @include mobile{
             display: none;
-            position: absolute;
-            width: 20px;
-            top: 21%;
-            left: 1%;
-        }       
+        }
         ul{           
-            margin-left: 20%;
+            margin-left: 30%;
             margin-top: 0;
             margin-bottom: 0;
             display: flex;
@@ -22,31 +45,48 @@ header{
                 margin-left: 0;
                 padding-left: 0;
                 gap: 0.2rem;
-            }                  
+            }
+            @include mobile{            
+                flex-direction: column;
+                margin: 0;
+                gap: 0.2700rem;                         
+            }                       
             li{              
                 padding: 0.5rem;
                 cursor: pointer;
                 font-size: 1.1rem;
                 transition: 0.5s;
-                &:last-child{
-                    display: flex;
-                    gap: 5px;
-                    margin-left: auto;
-                    margin-right: 25%;
-                    font-style: italic;
-                    font-weight: 500;
-                    img{
-                        width: 28px;                  
+                @include mobile{
+                    padding: 1px;                
+                    text-align: center;
+                    &:not(.navbar-logo){
+                        margin-right: 5%;
                     }
-                    @include tablet{
-                        margin-left: auto;
-                        margin-right: 0;
-                    }
-                }
+                }                                                    
+            } 
+            .navbar-logo{
+                display: flex;
+                gap: 5px;
+                margin-left: auto;
+                margin-right: 25%;
+                font-style: italic;
+                font-weight: 500;
                 &:hover{
                     color: rgba(0, 0, 0, 0.551);
-                }                         
-            }                                        
+                }                
+                img{
+                    width: 28px;                                      
+                }
+                @include tablet{
+                    margin-left: auto;
+                    margin-right: 0;
+                }     
+                @include mobile{
+                   gap: 0; 
+                   display: block; 
+                   margin-bottom: 1%;           
+                } 
+            }                                       
         }
     }   
 }

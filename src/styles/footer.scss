@@ -50,6 +50,11 @@ footer{
                     flex-direction: column;
                     gap: 6px;
                 }
+                @include mobile{
+                    h5{
+                        margin-top: 5%;
+                    }
+                }
             }   
             div:nth-child(2){
                 display: flex;

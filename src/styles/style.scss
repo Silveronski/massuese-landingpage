@@ -350,5 +350,9 @@
         &:hover{
             transform: scale(1.2);
         }
+        @include mobile{
+            right: 2%;
+            bottom: 1.5%;
+        }
     }
 }

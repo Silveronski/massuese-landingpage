@@ -61,16 +61,16 @@ const Navbar = () => {
     navbar.current.style.display = 'none';
   }
 
-  useEffect(() => {
-    const handleTouch = () => {
-      if (isNavbarOpen && window.innerWidth <= 480) {
-        closeNavbar();
-      }
-    }
+  // useEffect(() => {
+  //   const handleTouch = () => {
+  //     if (isNavbarOpen && window.innerWidth <= 480) {
+  //       closeNavbar();
+  //     }
+  //   }
 
-    document.addEventListener('touchstart', handleTouch);
-    return () => document.removeEventListener('touchstart', handleTouch);
-  },[isNavbarOpen]); 
+  //   document.addEventListener('touchstart', handleTouch);
+  //   return () => document.removeEventListener('touchstart', handleTouch);
+  // },[isNavbarOpen]); 
 
   return (
     <header>

@@ -48,7 +48,10 @@
             }          
             .carousel-caption{
                 position: absolute;
-                top: 45%;                     
+                top: 45%;
+                @include mobile{
+                    top: 35%;
+                }                       
                 h1{
                     font-size: 3rem;
                     margin-bottom: 0;

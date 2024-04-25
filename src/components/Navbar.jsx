@@ -17,7 +17,7 @@ const Navbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
     if (isNavbarOpen){
       imgRef.current.src = hamburger;
-      navbar.current.style.animation = "slideInFromDown 0.4s ease";  
+      navbar.current.style.animation = "slideInFromDown 0.7s ease";  
       navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });    
     }
     else {

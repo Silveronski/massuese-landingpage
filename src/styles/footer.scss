@@ -25,7 +25,7 @@ footer{
             }
             @include mobile{
                 flex-direction: column;  
-                gap: 20px;       
+                gap: 20px;    
             }
             div{
                 width: 100%;
@@ -84,9 +84,10 @@ footer{
                         margin: 5px 20px;
                     }
                     @include mobile{
-                        margin-top: 3%;
+                        margin-top: 3%;                      
                         width: 90%;
-                        height: 200px;            
+                        height: 200px; 
+                        margin-bottom: 20px;           
                     }
                 }
             }  

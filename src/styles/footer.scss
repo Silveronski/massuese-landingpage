@@ -11,6 +11,9 @@ footer{
             height: 800px;
             margin-top: 5rem;            
         }
+        @include laptop{
+            height: 40vh;
+        }
         .contact-us-wrapper{
             padding-top: 1%;
             width: 75%;

@@ -188,7 +188,7 @@
                 padding: 5px;  
                 box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.559);      
                 @include laptop{
-                    width: 35%;
+                    width: 37%; 
                     margin: 0.8rem auto;
                     &:nth-child(n+4){
                         margin-top: 2rem;

@@ -9,15 +9,11 @@ const Navbar = () => {
   const navbar = useRef();
   const imgRef = useRef();
 
-  const onAnimationEnd = () => {
-    navbar.current.style.display = 'none';
-  }
-
   const handleHamburgerClick = () => {
     setIsNavbarOpen(!isNavbarOpen);
     if (isNavbarOpen){
       imgRef.current.src = hamburger;
-      navbar.current.style.animation = "slideInFromDown 0.7s ease";  
+      navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
       navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });    
     }
     else {
@@ -29,14 +25,49 @@ const Navbar = () => {
     }
   }
 
+  const handleNavbarNavigation = (headerClicked) => {
+    let offset = 0;
+    switch (headerClicked) {
+      case "contact":
+        offset = document.querySelector('.contact-us-container').offsetTop;
+        break;
+
+      case "products":
+        offset = document.querySelector('.my-products-container').offsetTop;
+        break;
+
+      case "treatments":
+        offset = document.querySelector('.treatments-container').offsetTop;
+        break;
+
+      case "about":
+        offset = document.querySelector('.aboutMe-container').offsetTop;
+        break;
+
+   
+    }   
+
+    window.scrollTo({
+      top: offset - document.querySelector('.main-navbar').offsetHeight,
+      behavior: 'smooth'
+    });
+
+  }
+  
+
+  const onAnimationEnd = () => {
+    navbar.current.style.display = 'none';
+  }
+
   return (
     <header>
         <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
-                <li>צור קשר</li>
-                <li>טיפולים</li>
-                <li>עליי</li>                    
+                <li onClick={() => handleNavbarNavigation("contact")}>צור קשר</li>
+                <li onClick={() => handleNavbarNavigation("products")}>מוצרים</li>
+                <li onClick={() => handleNavbarNavigation("treatments")}>טיפולים</li>
+                <li onClick={() => handleNavbarNavigation("about")}>עליי</li>                    
                 <li className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>              
             </ul>
         </nav>

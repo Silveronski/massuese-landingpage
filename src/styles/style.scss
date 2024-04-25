@@ -13,38 +13,20 @@
         user-select: none;
         position: relative;
         @include laptop{
-            height: $laptopCarouselHeight;
-        }
-        @include tablet{
-            height: $tabletCarouselHeight;
-        }
-        @include mobile{
-            height: $mobileCarouselHeight;
-        }       
+            height: 100vh;
+        }               
         .carousel-item{           
             position: relative;
             height: 100vh;
             @include laptop{
-                height: $laptopCarouselHeight;
-            }
-            @include tablet{
-                height: $tabletCarouselHeight;
-            }
-            @include mobile{
-                height: $mobileCarouselHeight;                            
-            }
+                height: 100vh;
+            }                  
             img{           
                 width: 100%;
                 object-fit: cover;
                 @include laptop{
-                    height: $laptopCarouselHeight;                                   
-                }
-                @include tablet{
-                    height: $tabletCarouselHeight;              
-                }
-                @include mobile{
-                    height: $mobileCarouselHeight;                                    
-                }
+                    height: 100vh;                                   
+                }                            
             }          
             .carousel-caption{
                 position: absolute;
@@ -138,6 +120,9 @@
                         align-self: center;
                         margin-top: 0.3rem;                         
                     }
+                    @include tablet{
+                        margin-bottom: 2.5rem;             
+                    }
                 }
                 p{
                     direction: rtl;
@@ -149,7 +134,8 @@
                         padding-left: 0.5rem;
                     }
                     @include mobile{
-                        font-size: 1rem;             
+                        font-size: 1rem; 
+                        padding-left: 2.5rem;            
                     }
                 }
             }
@@ -176,6 +162,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            @include laptop{
+                width: 90%; 
+            }
             @include mobile{
                 width: 100%;                
             }
@@ -203,11 +192,14 @@
                 padding: 5px;  
                 box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.559);      
                 @include laptop{
-                    width: 40%;
+                    width: 35%;
                     margin: 0.8rem auto;
                     &:nth-child(n+4){
                         margin-top: 2rem;
                     }
+                }
+                @include tablet{
+                    width: 45%;
                 }
                 @include mobile{
                     width: 85%;                
@@ -276,6 +268,10 @@
             color: $grayish;
             letter-spacing: 1px;
             margin-bottom: 0;
+            @include mobile{
+                margin-top: 35px;
+                margin-bottom: 5px;
+            }
         }
         .my-products-wrapper{
             display: flex;
@@ -285,13 +281,19 @@
             margin-top: 1%;
             @include laptop{
                 width: 80%;
+            }         
+            @include mobile{
+                width: 100%;
             }
             hr{
                 margin-top: 0.5%;  
                 width: 75%;
                 @include laptop{
                     width: 80%;
-                }                  
+                }  
+                @include mobile{
+                    width: 100%;
+                }                
             }
             .my-product{
                 display: flex;  
@@ -300,16 +302,24 @@
                 width: 75%;  
                 @include laptop{
                     width: 80%;
-                }    
-                // border: $greenColor 2px solid;
-                // border-radius: 20px;
-                // box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.559);    
+                } 
+                @include mobile{
+                    width: 90%;
+                    flex-direction: column;
+                    border: $greenColor 2px solid;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.559);
+                }   
+                    
                 &:nth-child(odd){
                     img{
                         &:hover{
                             rotate: 10deg;
                         }
                     }
+                    @include mobile{                       
+                        flex-direction: column-reverse;
+                    }  
                 }
                 &:nth-child(even){
                     img{
@@ -324,11 +334,20 @@
                     justify-content: center;
                     text-align: right;
                     padding: 1rem 2rem;
+                     
                     h5{
-                       margin-bottom: 2%;
+                       margin-bottom: 2%; 
+                        @include mobile{                       
+                            text-align: center;
+                        }                      
                     }
                     p{
-                        direction: rtl;                                        
+                        direction: rtl; 
+                        @include mobile{                       
+                            margin-top: 1%;
+                            padding-left: 1rem;
+                            padding-right: 1.6rem;
+                        }                                        
                     }            
                 }
                 img{
@@ -336,7 +355,12 @@
                     height: 250px;
                     margin: auto 1.5rem;
                     padding: 1rem;
-                    transition: 1s;                 
+                    transition: 1s;
+                    @include mobile{                       
+                        width: 150px;
+                        height: auto;
+                        align-self: center;
+                    }                  
                 }
             }
         }

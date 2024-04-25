@@ -1,9 +1,6 @@
 $greenColor:#c0e4b4;
 $lightBlack:rgb(57, 56, 56);
 $grayish: rgb(93, 92, 92);
-$laptopCarouselHeight: 90vh;
-$tabletCarouselHeight: 70vh;
-$mobileCarouselHeight: 100vh;
 
 @mixin mobile{
     @media screen and (max-width: 480px) {

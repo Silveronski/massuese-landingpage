@@ -2,8 +2,9 @@ header{
     .hamburger{
         display: none;
         position: fixed;
+        cursor: pointer;
         width: 30px;
-        top: 1.5%;
+        top: 1%;
         left: 1.5%;
         z-index: 999;
         @include mobile{
@@ -12,9 +13,10 @@ header{
     }   
     .main-navbar{
         position: fixed;
+        display: block;
         z-index: 10;
         width: 100%;
-        background-color: $greenColor;       
+        background-color: $greenColor;    
         @keyframes slideInFromAbove {
             0%{
                 top: -100%;
@@ -33,9 +35,12 @@ header{
         } 
         @include mobile{
             display: none;
+            border-bottom-left-radius: 50px; 
+            border-bottom-right-radius: 50px; 
+            box-shadow: 0.5px 0.5px 5px black;
         }
         ul{           
-            margin-left: 30%;
+            margin-left: 18%;
             margin-top: 0;
             margin-bottom: 0;
             display: flex;
@@ -47,21 +52,27 @@ header{
                 gap: 0.2rem;
             }
             @include mobile{            
-                flex-direction: column;
+                flex-direction: column-reverse;
                 margin: 0;
-                gap: 0.2700rem;                         
+                gap: 0.2700rem;                                     
             }                       
             li{              
                 padding: 0.5rem;
                 cursor: pointer;
                 font-size: 1.1rem;
                 transition: 0.5s;
+                &:hover{
+                    color: rgba(0, 0, 0, 0.551);
+                }
                 @include mobile{
                     padding: 1px;                
                     text-align: center;
                     &:not(.navbar-logo){
                         margin-right: 5%;
                     }
+                    &:nth-child(1){
+                        margin-bottom: 5px;
+                    }                 
                 }                                                    
             } 
             .navbar-logo{
@@ -70,10 +81,7 @@ header{
                 margin-left: auto;
                 margin-right: 25%;
                 font-style: italic;
-                font-weight: 500;
-                &:hover{
-                    color: rgba(0, 0, 0, 0.551);
-                }                
+                font-weight: 500;                              
                 img{
                     width: 28px;                                      
                 }
@@ -81,10 +89,10 @@ header{
                     margin-left: auto;
                     margin-right: 0;
                 }     
-                @include mobile{
-                   gap: 0; 
-                   display: block; 
-                   margin-bottom: 1%;           
+                @include mobile{                   
+                   display: block;  
+                   margin-right: 26%; 
+                   font-size: 1.2rem;      
                 } 
             }                                       
         }

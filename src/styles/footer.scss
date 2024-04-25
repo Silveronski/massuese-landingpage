@@ -26,7 +26,11 @@ footer{
             @include laptop{
                 width: 100%;
             }
+            @include tablet{
+                width: 100%;
+            }
             @include mobile{
+                width: 100%;
                 flex-direction: column;  
                 gap: 20px;    
             }
@@ -91,8 +95,7 @@ footer{
                         margin: 5px 20px;
                     }
                     @include mobile{
-                        margin-top: 3%;                      
-                        width: 90%;
+                        margin-top: 3%;                                            
                         height: 200px;                                 
                     }
                 }

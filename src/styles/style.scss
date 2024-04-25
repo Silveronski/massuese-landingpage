@@ -44,11 +44,11 @@
                 button{
                     background: transparent;
                     color: white;
-                    padding: 5px 45px;
+                    padding: 5px 55px;
                     outline: none;
                     border: $greenColor 2.5px solid;
                     border-radius: 25px;
-                    font-size: 1.5rem;
+                    font-size: 1.5500rem;
                     transition: 0.5s;
                     margin-top: 0.5%;
                     font-weight: 600;
@@ -76,7 +76,7 @@
                 width: 100%;              
             }
             @include tablet{
-                width: 80%;              
+                width: 90%;              
             }
             h2{
                 text-align: center;
@@ -110,7 +110,7 @@
                         width: 170px;
                         height: 170px;
                         align-self: center;
-                        margin-top: 0.3rem;                         
+                        margin-bottom: 3rem;                         
                     }
                     @include tablet{
                         margin-bottom: 2.5rem;             
@@ -143,8 +143,7 @@
         h3{
             text-align: center;          
             font-style: italic;
-            font-size: 3.5rem;
-            margin-bottom: 1%;
+            font-size: 3rem;          
             letter-spacing: 1px;
             color: rgb(93, 92, 92);
             @include mobile{
@@ -160,6 +159,9 @@
             justify-content: space-around;
             @include laptop{
                 width: 90%; 
+            }
+            @include tablet{
+                width: 95%;
             }
             @include mobile{
                 width: 100%;                
@@ -196,9 +198,11 @@
                 }
                 @include tablet{
                     width: 45%;
+                    margin: 1.5rem auto;
                 }
                 @include mobile{
-                    width: 85%;                
+                    width: 85%;
+                    margin: 1.3rem auto;                
                 }
                
                 &:hover{
@@ -232,8 +236,8 @@
                 }
                 img{
                     transition: 0.3s;
-                    margin-top: 1.2%; 
-                    width: 60px;
+                    margin-top: 1.5%; 
+                    width: 65px;
                     background-color: $greenColor;
                     padding: 8px;
                     border-radius: 50%;
@@ -281,19 +285,24 @@
             flex-direction: column;
             align-items: center;
             width: 80%;
-            margin-top: 1%;
+            margin-top: 0.3%;
             @include laptop{
                 width: 80%;
-            }         
+            }  
+            @include tablet{
+                width: 100%;
+            }        
             @include mobile{
                 width: 100%;
             }
-            hr{
-                margin-top: 0.5%;  
+            hr{ 
                 width: 75%;
                 @include laptop{
                     width: 80%;
                 }  
+                @include tablet{
+                    width: 100%;
+                }
                 @include mobile{
                     width: 100%;
                 }                
@@ -306,6 +315,12 @@
                 @include laptop{
                     width: 80%;
                 } 
+                @include tablet{
+                    width: 85%;
+                    border: $greenColor 2px solid;
+                    border-radius: 30px;
+                    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.559);
+                }
                 @include mobile{
                     width: 90%;
                     flex-direction: column;

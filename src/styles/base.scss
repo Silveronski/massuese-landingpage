@@ -15,7 +15,7 @@ $grayish: rgb(93, 92, 92);
 }
 
 @mixin laptop{
-    @media screen and (max-width: 1540px) {
+    @media screen and (min-width: 1026px) and (max-width: 1540px) {
         @content;
     }
 }

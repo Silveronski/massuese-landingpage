@@ -69,6 +69,7 @@ header{
                     text-align: center;
                     &:not(.navbar-logo){
                         margin-right: 5%;
+                        font-size: 1.2rem;
                     }
                     &:nth-child(1){
                         margin-bottom: 5px;
@@ -91,8 +92,8 @@ header{
                 }     
                 @include mobile{                   
                    display: block;  
-                   margin-right: 26%; 
-                   font-size: 1.2rem;      
+                   margin-right: 19%; 
+                   font-size: 1.3rem;      
                 } 
             }                                       
         }

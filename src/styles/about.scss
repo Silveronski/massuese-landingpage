@@ -1,0 +1,67 @@
+.aboutMe-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;       
+    .aboutMe-wrapper{
+        width: 60%;
+        @include mobile{
+            width: 100%;              
+        }
+        @include tablet{
+            width: 90%;              
+        }
+        h2{
+            text-align: center;
+            margin-top: 7%;
+            font-size: 3rem;
+            font-weight: normal;
+            font-style: italic;
+            color: $grayish;
+            span:last-child{
+                color: $greenColor;
+            }
+        }
+        .content{
+            display: flex;
+            gap: 35px;
+            @include mobile{
+                flex-direction: column; 
+                gap: 25px;               
+            }
+            img{
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                transition: 0.5s;
+                align-self: center;
+                cursor: pointer;
+                &:hover{
+                    border-radius: 15%;
+                }
+                @include laptop{
+                    width: 170px;
+                    height: 170px;
+                    align-self: center;
+                    margin-bottom: 3rem;                         
+                }
+                @include tablet{
+                    margin-bottom: 2.5rem;             
+                }
+            }
+            p{
+                direction: rtl;
+                font-size: 1.6rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                @include laptop{
+                    font-size: 1.2300rem;
+                    padding-left: 0.5rem;
+                }
+                @include mobile{
+                    font-size: 1.1rem; 
+                    padding-left: 2.5rem;            
+                }
+            }
+        }
+    }
+}

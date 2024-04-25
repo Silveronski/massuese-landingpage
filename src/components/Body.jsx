@@ -38,7 +38,7 @@ const Body = () => {
       </section>
 
       <section className='treatments-container'>
-        <h3>סוגי טיפולי מגע</h3>
+        <h3><span>סוגי</span> <span>טיפולי</span> <span>מגע</span></h3>
         <div className='treatments-wrapper'>          
           <hr />
           <TreatmentCard ImageUrl={sweden} TreatmentName="עיסוי שוודי הוליסטי" 

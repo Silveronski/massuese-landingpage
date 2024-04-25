@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Logo from '../assets/images/Logo.png';
 import close from '../assets/images/close.png';
 import hamburger from '../assets/images/hamburger.png';
@@ -11,10 +11,8 @@ const Navbar = () => {
 
   const handleHamburgerClick = () => {
     setIsNavbarOpen(!isNavbarOpen);
-    if (isNavbarOpen){
-      imgRef.current.src = hamburger;
-      navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
-      navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });    
+    if (isNavbarOpen) {
+      closeNavbar();
     }
     else {
       navbar.current.style.animation = "slideInFromAbove 0.4s ease";
@@ -23,6 +21,12 @@ const Navbar = () => {
         imgRef.current.src = close;        
       }, 150);
     }
+  }
+
+  const closeNavbar = () => {
+    imgRef.current.src = hamburger;
+    navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
+    navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });   
   }
 
   const handleNavbarNavigation = (headerClicked) => {
@@ -43,8 +47,6 @@ const Navbar = () => {
       case "about":
         offset = document.querySelector('.aboutMe-container').offsetTop;
         break;
-
-   
     }   
 
     window.scrollTo({
@@ -52,12 +54,23 @@ const Navbar = () => {
       behavior: 'smooth'
     });
 
+    closeNavbar();
   }
   
-
   const onAnimationEnd = () => {
     navbar.current.style.display = 'none';
   }
+
+  useEffect(() => {
+    const handleTouch = () => {
+      if (isNavbarOpen && window.innerWidth <= 480) {
+        closeNavbar();
+      }
+    }
+
+    document.addEventListener('touchstart', handleTouch);
+    return () => document.removeEventListener('touchstart', handleTouch);
+  },[isNavbarOpen]); 
 
   return (
     <header>

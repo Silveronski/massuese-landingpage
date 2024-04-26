@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import one from '../assets/images/one.jpg';
 import two from '../assets/images/two.jpg';
 import three from '../assets/images/three.jpg';
+import Logo from '../assets/images/Logo.png';
 
 const CarouselComp = () => {
 
@@ -11,34 +12,29 @@ const CarouselComp = () => {
   }
 
   return (
-    <Carousel>
-          <Carousel.Item>
-              <img src={one}/>           
-              <Carousel.Caption>
-                <h1>אנה לב</h1>
-                <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
-                <button onClick={handleClick}>קבע/י תור</button>
-              </Carousel.Caption>
-          </Carousel.Item>
+    <div className='carousel-container'>
 
-          <Carousel.Item>
-              <img src={two}/>   
-              <Carousel.Caption>
-                <h1>אנה לב</h1>
-                <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
-                <button onClick={handleClick}>קבע/י תור</button>
-              </Carousel.Caption>     
-          </Carousel.Item>
+      <div className='info'>
+        <h1>אנה לב</h1>
+        <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
+        <button onClick={handleClick}>קבע/י תור</button>
+      </div>
 
-          <Carousel.Item>     
-              <img src={three}/>    
-              <Carousel.Caption>
-                <h1>אנה לב</h1>
-                <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
-                <button onClick={handleClick}>קבע/י תור</button>
-              </Carousel.Caption>     
-          </Carousel.Item>
+      <Carousel>     
+        <Carousel.Item>
+            <img src={one}/>                     
+        </Carousel.Item>
+
+        <Carousel.Item>
+            <img src={two}/>   
+        </Carousel.Item>
+
+        <Carousel.Item>     
+            <img src={three}/>
+        </Carousel.Item>
       </Carousel>
+
+    </div>
   )
 }
 

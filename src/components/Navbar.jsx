@@ -9,8 +9,7 @@ const Navbar = () => {
   const navbar = useRef();
   const imgRef = useRef();
 
-  const handleHamburgerClick = () => {
-    setIsNavbarOpen(!isNavbarOpen);
+  const handleHamburgerClick = () => {  
     if (isNavbarOpen) {
       closeNavbar();
     }
@@ -20,10 +19,12 @@ const Navbar = () => {
       setTimeout(() => {
         imgRef.current.src = close;        
       }, 150);
+      setIsNavbarOpen(!isNavbarOpen);
     }
   }
 
   const closeNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
     imgRef.current.src = hamburger;
     navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
     navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });   
@@ -64,7 +65,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleTouch = (e) => {
-      if (isNavbarOpen && window.innerWidth <= 480 && e.target.localName !== "li") {
+      if (isNavbarOpen && window.innerWidth <= 480 &&
+         e.target.localName !== "li" && e.target.localName !== "ul" && e.target.localName !== "img") {
         closeNavbar();
       }
     }

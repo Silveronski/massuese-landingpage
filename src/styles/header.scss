@@ -35,8 +35,7 @@ header{
         } 
         @include mobile{
             display: none;
-            border-bottom-left-radius: 50px; 
-            border-bottom-right-radius: 50px; 
+            
             box-shadow: 0.5px 0.5px 5px black;
         }
         ul{           

@@ -29,7 +29,8 @@ const Navbar = () => {
     navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });   
   }
 
-  const handleNavbarNavigation = (headerClicked) => {
+  const handleNavbarNavigation = (headerClicked, e) => {
+    console.log(e);
     let offset = 0;
     switch (headerClicked) {
       case "contact":
@@ -54,30 +55,30 @@ const Navbar = () => {
       behavior: 'smooth'
     });
 
-    closeNavbar();
+    window.innerWidth <= 480 && closeNavbar();
   }
   
   const onAnimationEnd = () => {
     navbar.current.style.display = 'none';
   }
 
-  // useEffect(() => {
-  //   const handleTouch = () => {
-  //     if (isNavbarOpen && window.innerWidth <= 480) {
-  //       closeNavbar();
-  //     }
-  //   }
+  useEffect(() => {
+    const handleTouch = (e) => {
+      if (isNavbarOpen && window.innerWidth <= 480 && e.target.localName !== "li") {
+        closeNavbar();
+      }
+    }
 
-  //   document.addEventListener('touchstart', handleTouch);
-  //   return () => document.removeEventListener('touchstart', handleTouch);
-  // },[isNavbarOpen]); 
+    document.addEventListener('touchstart', handleTouch);
+    return () => document.removeEventListener('touchstart', handleTouch);
+  },[isNavbarOpen]); 
 
   return (
     <header>
         <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
-                <li onClick={() => handleNavbarNavigation("contact")}>צור קשר</li>
+                <li onClick={(e) => handleNavbarNavigation("contact",e)}>צור קשר</li>
                 <li onClick={() => handleNavbarNavigation("products")}>מוצרים</li>
                 <li onClick={() => handleNavbarNavigation("treatments")}>טיפולים</li>
                 <li onClick={() => handleNavbarNavigation("about")}>עליי</li>                    

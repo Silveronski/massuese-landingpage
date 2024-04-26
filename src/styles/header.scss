@@ -3,9 +3,9 @@ header{
         display: none;
         position: fixed;
         cursor: pointer;
-        width: 30px;
-        top: 1%;
-        left: 1.5%;
+        width: 45px;
+        top: 1.5%;
+        left: 3.5%;
         z-index: 999;
         @include mobile{
             display: inline-block;

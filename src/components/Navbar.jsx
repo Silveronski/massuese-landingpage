@@ -17,8 +17,9 @@ const Navbar = () => {
       navbar.current.style.animation = "slideInFromAbove 0.4s ease";
       navbar.current.style.display = 'block';
       setTimeout(() => {
-        imgRef.current.src = close;        
-      }, 150);
+        imgRef.current.src = close; 
+        imgRef.current.style.width = '35px';       
+      }, 100);
       setIsNavbarOpen(!isNavbarOpen);
     }
   }
@@ -26,12 +27,12 @@ const Navbar = () => {
   const closeNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
     imgRef.current.src = hamburger;
+    imgRef.current.style.width = '45px'; 
     navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
     navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });   
   }
 
-  const handleNavbarNavigation = (headerClicked, e) => {
-    console.log(e);
+  const handleNavbarNavigation = (headerClicked) => {
     let offset = 0;
     switch (headerClicked) {
       case "contact":
@@ -80,7 +81,7 @@ const Navbar = () => {
         <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
-                <li onClick={(e) => handleNavbarNavigation("contact",e)}>צור קשר</li>
+                <li onClick={() => handleNavbarNavigation("contact")}>צור קשר</li>
                 <li onClick={() => handleNavbarNavigation("products")}>מוצרים</li>
                 <li onClick={() => handleNavbarNavigation("treatments")}>טיפולים</li>
                 <li onClick={() => handleNavbarNavigation("about")}>עליי</li>                    

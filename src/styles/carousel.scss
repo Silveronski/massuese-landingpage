@@ -29,6 +29,8 @@
             font-weight: 600;
             @include mobile{
                 font-size: 1.4rem;
+                margin-top: 0;
+                margin-bottom: 20px;
             }
         }
         button{

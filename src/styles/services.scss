@@ -1,0 +1,24 @@
+.services-container{       
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    font-family: Rubik;     
+    h3{
+        text-align: center;          
+        font-style: italic;
+        font-size: 3rem;          
+        letter-spacing: 1px;
+        color: rgb(93, 92, 92);
+        span:nth-child(2){
+            color: $greenColor;
+        }
+        @include mobile{
+            margin-bottom: 10px;           
+        }
+    }
+    .services-wrapper{
+        width: 80%;
+    }
+}

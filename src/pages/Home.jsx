@@ -5,17 +5,12 @@ import Body from '../components/Body';
 import whatsapp from '../assets/images/whatsapp.png';
 
 const Home = () => {
-
-  const handleClick = () => {
-    window.open("https://wa.me/972547933887", "_blank");
-  }
-
   return (
     <div className='site-container'>
         <Navbar/>
         <Body/>
         <Contact/>
-        <img src={whatsapp} onClick={handleClick} alt="" className='whatsapp-icon'/>
+        <img src={whatsapp} className='whatsapp-icon' onClick={() => window.open("https://wa.me/972547933887", "_blank")} alt=""/>
     </div>
   )
 }

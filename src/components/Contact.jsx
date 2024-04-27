@@ -22,7 +22,7 @@ const Contact = () => {
             <h5>צרו קשר</h5>
             <hr/>
             <ul>
-              <li><a href="https://wa.me/972547933887" target="_blank">ווצאפ</a></li>
+              <li><a href="https://wa.me/972547933887" target="_blank">וואטסאפ</a></li>
               <li><a href="https://www.instagram.com/annalev_massage_theraphy/" target="_blank">אינסטגרם</a></li>
               <li><a href="https://www.facebook.com/AnnaMassageAndAroma" target="_blank">פייסבוק</a></li>
               <li><a href="mailto:annalev2222@gmail.com">אימייל</a></li>

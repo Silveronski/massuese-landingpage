@@ -65,6 +65,14 @@ const Body = () => {
         </div>
       </section> 
 
+      <section className='services-container'>
+        <h3><span>שירותים</span> <span>נוספים</span></h3>
+        <div className='services-wrapper'>
+          <hr />
+          
+        </div>
+      </section>
+
       <section className='my-products-container'>
         <h4><span>המוצרים</span> <span>שלי</span></h4>
         <div className="my-products-wrapper">

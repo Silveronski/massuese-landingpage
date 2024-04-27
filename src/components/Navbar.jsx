@@ -10,7 +10,6 @@ const Navbar = () => {
   const imgRef = useRef();
 
   const handleHamburgerClick = () => {
-    console.log(navbar.current.style.animation);
     if (navbar.current.style.animation !== "") return;
 
     if (isNavbarOpen) {
@@ -55,9 +54,13 @@ const Navbar = () => {
         offset = document.querySelector('.my-products-container').offsetTop;
         break;
 
-      case "treatments":
-        offset = document.querySelector('.treatments-container').offsetTop;
+      case "services":
+        offset = document.querySelector('.services-container').offsetTop;
         break;
+
+      case "treatments":
+      offset = document.querySelector('.treatments-container').offsetTop;
+      break;
 
       case "about":
         offset = document.querySelector('.aboutMe-container').offsetTop;
@@ -92,6 +95,7 @@ const Navbar = () => {
             <ul>
                 <li onClick={() => handleNavbarNavigation("contact")}>צור קשר</li>
                 <li onClick={() => handleNavbarNavigation("products")}>מוצרים</li>
+                <li onClick={() => handleNavbarNavigation("services")}>שירותים</li>
                 <li onClick={() => handleNavbarNavigation("treatments")}>טיפולים</li>
                 <li onClick={() => handleNavbarNavigation("about")}>עליי</li>                    
                 <li className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>              

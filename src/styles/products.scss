@@ -1,5 +1,5 @@
 .my-products-container{
-    margin-top: 8%;
+    margin-top: 7%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,10 +53,7 @@
                 width: 80%;
             } 
             @include tablet{
-                width: 85%;
-                border: $greenColor 2px solid;
-                border-radius: 30px;
-                box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.559);
+                width: 85%;              
             }
             @include mobile{
                 width: 90%;
@@ -96,7 +93,7 @@
                     font-size: 1.8rem; 
                     @include mobile{                       
                         text-align: center;
-                        font-size: 1.5200rem;
+                        font-size: 1.6rem;
                     }                      
                 }
                 p{
@@ -105,7 +102,7 @@
                     @include mobile{                       
                         margin-top: 1%;
                         text-align: center;
-                        font-size: 1.1rem;
+                        font-size: 1.2rem;
                     }                                        
                 }            
             }

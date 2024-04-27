@@ -95,6 +95,11 @@ footer{
                         width: 95%;                      
                         margin: 5px 20px;
                     }
+                    @include tablet{
+                        width: 100%;
+                        margin-left: 1rem;
+                        margin-top: 0.5rem;
+                    }
                     @include mobile{
                         margin-top: 3%;                                            
                         height: 200px;                                 

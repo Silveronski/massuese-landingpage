@@ -25,7 +25,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         @include laptop{
-            width: 90%; 
+            width: 90%;           
         }
         @include tablet{
             width: 95%;
@@ -57,7 +57,7 @@
             padding: 5px;  
             box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.559);      
             @include laptop{
-                width: 37%; 
+                width: 40%; 
                 margin: 0.8rem auto;
                 &:nth-child(n+4){
                     margin-top: 2rem;
@@ -113,13 +113,16 @@
             h4{
                 text-align: center;
                 font-size: 1.7rem;
+                @include mobile{
+                  margin-bottom: 0;  
+                } 
             }
             p{
                 text-align: center;
                 direction: rtl;
                 font-size: 1.2300rem;
                 padding: 2px 5px;
-                transition: 0.3s;                   
+                transition: 0.3s;                                
             }
         }            
     }

@@ -8,9 +8,13 @@ import rekamot from '../assets/images/rekamot.png';
 import candle from '../assets/images/candle.png';
 import soaps from '../assets/images/soaps.png';
 import serum from '../assets/images/serum.png';
+import home from '../assets/images/home.png';
+import running from '../assets/images/running.png';
+import pregnant from '../assets/images/pregnant.png';
 import CarouselComp from './CarouselComp';
 import TreatmentCard from './TreatmentCard';
 import ProductCard from './ProductCard';
+import ServiceCard from './ServiceCard';
 
 const Body = () => {
   return (
@@ -67,9 +71,26 @@ const Body = () => {
 
       <section className='services-container'>
         <h3><span>שירותים</span> <span>נוספים</span></h3>
-        <div className='services-wrapper'>
-          <hr />
+        <hr/>
+
+        <div className='services-wrapper'>        
+          <ServiceCard imgUrl={pregnant} serviceName="עיסוי לנשים בהריון"
+            serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+            הרפיה ושחרור שרירים, שיפור זרימת הדם
+            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
+          />
+
+          <ServiceCard imgUrl={home} serviceName="הגעה עד הבית"
+            serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+            הרפיה ושחרור שרירים, שיפור זרימת הדם
+            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
+          />
           
+          <ServiceCard imgUrl={running} serviceName="עיסוי לספורטאים"
+            serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
+            הרפיה ושחרור שרירים, שיפור זרימת הדם
+            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
+          />
         </div>
       </section>
 
@@ -78,7 +99,7 @@ const Body = () => {
         <div className="my-products-wrapper">
           <hr/>
 
-          <ProductCard imgUrl={candle} productName={"נרות בעבודת יד"}
+          <ProductCard imgUrl={candle} productName="נרות בעבודת יד"
             productDescription="מערבבת, מכניסה כוונה, מוזגת, אחד, אחד
               חומרי הגלם הם הכי איכותיים וידידותיים
               אשתף בהמשך
@@ -89,7 +110,7 @@ const Body = () => {
               של נוכחות, משאלת הלב לאור ושל מרחב בטוח לגוף ולנפש."            
           />
 
-          <ProductCard imgUrl={soaps} productName={"סבונים טבעיים בעבודת יד"}
+          <ProductCard imgUrl={soaps} productName="סבונים טבעיים בעבודת יד"
             productDescription="סבונים מוצקים טבעיים בעבודת יד
               ממש כמו של פעם...
               הסבונים אקולוגיים ועשויים משמנים וחמאות טבעיות, 
@@ -100,7 +121,7 @@ const Body = () => {
               הניחוחות שלהם אצלי מגיעים מעולם הארומתרפיה."                     
           />
 
-          <ProductCard imgUrl={serum} productName={"בקבוקוני רסקיו פרחי באך"}
+          <ProductCard imgUrl={serum} productName="בקבוקוני רסקיו פרחי באך"
             productDescription="תמציות פרחי באך מותרות לשימוש מגיל 0 עד 120
               הרסקיו היא פורמולה שיעילה להרגעה 
               ברגע של מצבים שמכניסים אותנו לטראומה קשה, חדשות קשות מנשוא, 
@@ -111,6 +132,9 @@ const Body = () => {
         </div>
       </section>
 
+      <section className='gallery-container'>
+
+      </section>
     </main>
   )
 }

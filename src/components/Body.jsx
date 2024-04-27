@@ -1,5 +1,5 @@
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import closeUp from '../assets/images/closeUp.png';
 import sweden from '../assets/images/sweden.png';
 import oils from '../assets/images/oils.png';
@@ -11,6 +11,15 @@ import serum from '../assets/images/serum.png';
 import home from '../assets/images/home.png';
 import running from '../assets/images/running.png';
 import pregnant from '../assets/images/pregnant.png';
+import gallery1 from '../assets/images/gallery1.png';
+import gallery2 from '../assets/images/gallery2.png';
+import gallery3 from '../assets/images/gallery3.png';
+import gallery4 from '../assets/images/gallery4.png';
+import gallery5 from '../assets/images/gallery5.png';
+import gallery6 from '../assets/images/gallery6.png';
+import gallery7 from '../assets/images/gallery7.png';
+import gallery8 from '../assets/images/gallery8.png';
+import gallery9 from '../assets/images/gallery9.png';
 import CarouselComp from './CarouselComp';
 import TreatmentCard from './TreatmentCard';
 import ProductCard from './ProductCard';
@@ -133,7 +142,32 @@ const Body = () => {
       </section>
 
       <section className='gallery-container'>
-
+        <div className="gallery-wrapper">
+          <span>
+            <img src={gallery1} alt=""/>
+          </span>
+          <span>
+            <img src={gallery2} alt=""/>
+          </span>
+          <span>
+            <img src={gallery3} alt=""/>
+          </span>
+          <span>
+            <img src={gallery4} alt=""/>
+          </span>
+          <span>
+            <img src={gallery5} alt=""/>
+          </span>
+          <span>
+            <img src={gallery6} alt=""/>
+          </span>
+          <span>
+            <img src={gallery7} alt=""/>
+          </span>
+          <span>
+            <img src={gallery8} alt=""/>
+          </span>
+        </div>
       </section>
     </main>
   )

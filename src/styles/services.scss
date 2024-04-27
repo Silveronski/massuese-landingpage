@@ -40,9 +40,15 @@
             align-items: center;
             transition: 0.5s;
             &:hover{
-                transform: scale(1.02);           
+                transform: scale(1.02); 
+                img{
+                    border-bottom: 4px solid $greenColor;
+                }          
             }
             img{
+                width: 6vw;
+                margin-bottom: 1.3vh;
+                padding-bottom: 0.8vh;              
                 @include laptop{
                     width: 9vw;
                 }
@@ -52,12 +58,6 @@
                 @include mobile{
                     width: 35vw;
                 }
-                width: 6vw;
-                margin-bottom: 1.3vh;
-                padding-bottom: 0.8vh;
-                &:hover{
-                    border-bottom: 4px solid $greenColor;
-                }                
             }
             h4{
                 font-size: 1.8rem;

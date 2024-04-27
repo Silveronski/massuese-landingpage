@@ -9,18 +9,24 @@ const Navbar = () => {
   const navbar = useRef();
   const imgRef = useRef();
 
-  const handleHamburgerClick = () => {  
+  const handleHamburgerClick = () => {
+    console.log(navbar.current.style.animation);
+    if (navbar.current.style.animation !== "") return;
+
     if (isNavbarOpen) {
       closeNavbar();
-    }
+    }  
     else {
-      navbar.current.style.animation = "slideInFromAbove 0.4s ease";
+      setIsNavbarOpen(!isNavbarOpen);
+      navbar.current.style.animation = "slideInFromAbove 0.5s ease";
       navbar.current.style.display = 'block';
+      setTimeout(() => {
+        navbar.current.style.animation = "";
+      }, 550);
       setTimeout(() => {
         imgRef.current.src = close; 
         imgRef.current.style.width = '35px';       
-      }, 100);
-      setIsNavbarOpen(!isNavbarOpen);
+      }, 150);
     }
   }
 
@@ -29,7 +35,13 @@ const Navbar = () => {
     imgRef.current.src = hamburger;
     imgRef.current.style.width = '45px'; 
     navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
-    navbar.current.addEventListener("animationend", onAnimationEnd, { once: true });   
+    navbar.current.addEventListener("animationend", onAnimationEnd);     
+  }
+
+  const onAnimationEnd = () => {
+    navbar.current.style.display = 'none';
+    navbar.current.style.animation = "";
+    navbar.current.removeEventListener("animationend", onAnimationEnd);
   }
 
   const handleNavbarNavigation = (headerClicked) => {
@@ -59,21 +71,18 @@ const Navbar = () => {
 
     window.innerWidth <= 480 && closeNavbar();
   }
-  
-  const onAnimationEnd = () => {
-    navbar.current.style.display = 'none';
-  }
 
   useEffect(() => {
     const handleTouch = (e) => {
       if (isNavbarOpen && window.innerWidth <= 480 &&
-         e.target.localName !== "li" && e.target.localName !== "ul" && e.target.localName !== "img") {
-        closeNavbar();
+         e.target.localName !== "li" && e.target.localName !== "ul" && e.target.className !== "hamburger") {
+          closeNavbar();
       }
     }
 
     document.addEventListener('touchstart', handleTouch);
     return () => document.removeEventListener('touchstart', handleTouch);
+
   },[isNavbarOpen]); 
 
   return (

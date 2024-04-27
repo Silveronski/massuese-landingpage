@@ -143,30 +143,7 @@ const Body = () => {
 
       <section className='gallery-container'>
         <div className="gallery-wrapper">
-          <span>
-            <img src={gallery1} alt=""/>
-          </span>
-          <span>
-            <img src={gallery2} alt=""/>
-          </span>
-          <span>
-            <img src={gallery3} alt=""/>
-          </span>
-          <span>
-            <img src={gallery4} alt=""/>
-          </span>
-          <span>
-            <img src={gallery5} alt=""/>
-          </span>
-          <span>
-            <img src={gallery6} alt=""/>
-          </span>
-          <span>
-            <img src={gallery7} alt=""/>
-          </span>
-          <span>
-            <img src={gallery8} alt=""/>
-          </span>
+          
         </div>
       </section>
     </main>

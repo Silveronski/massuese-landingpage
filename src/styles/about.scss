@@ -55,8 +55,12 @@
                 padding-left: 2.5rem;
                 padding-right: 2.5rem;
                 @include laptop{
-                    font-size: 1.2300rem;
-                    padding-left: 0.5rem;
+                    font-size: 1.3rem;
+                    padding: 0;
+                }
+                @include tablet{
+                    font-size: 1.4rem;
+                    padding: 0;
                 }
                 @include mobile{
                     font-size: 1.1500rem; 

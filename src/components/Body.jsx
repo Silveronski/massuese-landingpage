@@ -26,6 +26,9 @@ import ProductCard from './ProductCard';
 import ServiceCard from './ServiceCard';
 
 const Body = () => {
+
+  const galleryImgUrls = [gallery1, gallery2, gallery3, gallery4,
+                          gallery5, gallery6, gallery7, gallery8, gallery9];
   return (
     <main> 
 
@@ -105,7 +108,7 @@ const Body = () => {
 
       <section className='my-products-container'>
         <h4><span>המוצרים</span> <span>שלי</span></h4>
-        <div className="my-products-wrapper">
+        <div className='my-products-wrapper'>
           <hr/>
 
           <ProductCard imgUrl={candle} productName="נרות בעבודת יד"
@@ -142,10 +145,13 @@ const Body = () => {
       </section>
 
       <section className='gallery-container'>
-        <div className="gallery-wrapper">
-          
+        <div className='gallery-wrapper'>
+          {[...Array(9)].map((_, index) => (
+            <img key={index} src={galleryImgUrls[index]} alt=""/>
+          ))}
         </div>
       </section>
+
     </main>
   )
 }

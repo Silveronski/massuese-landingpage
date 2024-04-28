@@ -61,6 +61,9 @@
         user-select: none;
         position: relative; 
         font-family: Rubik; 
+        @include mobile{
+            height: 100svh;
+        }
         .carousel-control-next,.carousel-control-prev{
             z-index: 5;
         }              

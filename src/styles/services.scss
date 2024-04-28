@@ -20,15 +20,19 @@
     }
     hr{
         width: 80%;
+        @include mobile{
+            width: 100%;
+            margin-top: 0;
+        }
     }
     .services-wrapper{
         width: 80%;
         display: flex;
         @include laptop{
-            width: 100%;
+            width: 95%;
         }
         @include tablet{
-            width: 100%;
+            width: 95%;
         }
         @include mobile{
             flex-direction: column;

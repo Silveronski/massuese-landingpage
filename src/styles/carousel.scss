@@ -1,13 +1,14 @@
 .carousel-container{
     position: relative;
+    background-color: $greenColor;
     .info{
         position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
         top: 42%;
-        z-index: 2;
         left: 50%;
+        z-index: 2;
         transform: translateX(-50%);
         color: white;
         text-align: center;

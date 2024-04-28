@@ -24,6 +24,7 @@ import CarouselComp from './CarouselComp';
 import TreatmentCard from './TreatmentCard';
 import ProductCard from './ProductCard';
 import ServiceCard from './ServiceCard';
+import { motion } from 'framer-motion';
 
 const Body = () => {
 

@@ -69,11 +69,17 @@
         }              
         .carousel-item{           
             position: relative;
-            height: 100vh;                            
+            height: 100vh; 
+            @include mobile{
+                height: 100svh;
+            }                           
             img{           
                 width: 100%;
                 height: 100vh;
-                object-fit: cover;                                           
+                object-fit: cover; 
+                @include mobile{
+                    height: 100svh;
+                }                                          
             }                      
         }
     } 

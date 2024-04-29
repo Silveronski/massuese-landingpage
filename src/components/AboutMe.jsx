@@ -1,6 +1,6 @@
 import closeUp from '../assets/images/closeUp.png';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/variants';
+import { downToUpVariants } from '../utils/Variants';
 
 const AboutMe = () => {
   return (

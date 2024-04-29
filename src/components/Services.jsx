@@ -3,7 +3,7 @@ import home from '../assets/images/home.png';
 import running from '../assets/images/running.png';
 import ServiceCard from '../cards/ServiceCard';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/variants';
+import { downToUpVariants } from '../utils/Variants';
 
 const Services = () => {
   return (

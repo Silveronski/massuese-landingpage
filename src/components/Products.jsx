@@ -3,7 +3,7 @@ import soaps from '../assets/images/soaps.png';
 import serum from '../assets/images/serum.png';
 import ProductCard from '../cards/ProductCard';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/variants';
+import { downToUpVariants } from '../utils/Variants';
 
 const Products = () => {
   return (

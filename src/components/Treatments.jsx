@@ -4,7 +4,7 @@ import face from '../assets/images/face.png';
 import rekamot from '../assets/images/rekamot.png';
 import TreatmentCard from '../cards/TreatmentCard';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/variants';
+import { downToUpVariants } from '../utils/Variants';
 
 const Treatments = () => {
   return (

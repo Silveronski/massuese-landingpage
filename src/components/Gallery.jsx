@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/variants';
-import { ImgUrls } from '../utils/galleryImgUrls';
+import { downToUpVariants } from '../utils/Variants';
+import { ImgUrls } from '../utils/GalleryImgUrls';
 
 const Gallery = () => {
     return (

@@ -3,7 +3,7 @@ import one from '../assets/images/one.jpg';
 import two from '../assets/images/two.jpg';
 import three from '../assets/images/three.jpg';
 import { motion } from 'framer-motion';
-import { carouselImgVariants, carouselInfoVariants } from '../utils/variants';
+import { carouselImgVariants, carouselInfoVariants } from '../utils/Variants';
 
 const CarouselComp = () => {
   return (

@@ -40,8 +40,8 @@
                     border-radius: 15%;
                 }
                 @include laptop{
-                    width: 170px;
-                    height: 170px;
+                    width: 190px;
+                    height: 190px;
                     align-self: center;
                     margin-bottom: 3rem;                         
                 }
@@ -54,6 +54,7 @@
                 font-size: 1.6rem;
                 padding-left: 2.5rem;
                 padding-right: 2.5rem;
+                padding-top: 0.3rem;
                 @include laptop{
                     font-size: 1.3rem;
                     padding: 0;
@@ -64,7 +65,8 @@
                 }
                 @include mobile{
                     font-size: 1.1500rem; 
-                    padding-left: 2.1rem;            
+                    padding-left: 2.1rem;
+                    padding-top: 0;            
                 }
             }
         }

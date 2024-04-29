@@ -91,6 +91,11 @@ footer{
                         }
                         img{
                             width: 30px;
+                            transition: 0.5s;
+                            cursor: pointer;
+                            &:hover{
+                                transform: scale(1.1);
+                            }
                         }
                     }
                 }

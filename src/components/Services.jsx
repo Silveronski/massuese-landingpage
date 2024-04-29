@@ -12,7 +12,7 @@ const Services = () => {
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "150px" : "650px"}}>
+        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "13%" : "650px"}}>
         <h3><span>שירותים</span> <span>נוספים</span></h3>
         <hr/>
 

@@ -10,7 +10,7 @@ const AboutMe = () => {
           variants={downToUpVariants}
           initial="notInView"
           whileInView="inView"
-          viewport={{amount: "all", once: true}}>         
+          viewport={{amount: "all", once: true, margin: "100px"}}>         
           <h2><span>קצת</span> <span>עליי</span></h2>
           <hr/>
           <div className='content'>

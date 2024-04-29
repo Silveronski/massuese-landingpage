@@ -13,7 +13,7 @@ const Treatments = () => {
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", once: true}}>
+        viewport={{amount: "all", once: true, margin: "200px"}}>
         <h3><span>סוגי</span> <span>טיפולי</span> <span>מגע</span></h3>
         <div className='treatments-wrapper'>          
           <hr />

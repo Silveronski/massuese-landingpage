@@ -15,13 +15,11 @@ export const carouselImgVariants = {
 export const carouselInfoVariants = {
     hidden: {
       opacity: 0,
-      scale: 0.3,
-      y: '-80%',
+      y: '20%',
       x: '-50%',
     }, 
     show:{
       opacity: 1,
-      scale: 1,
       y: '0%', 
       x: '-50%',
       transition: {

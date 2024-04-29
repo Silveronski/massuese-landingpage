@@ -12,7 +12,7 @@ const Products = () => {
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", margin: "550px", once: true}}>
+        viewport={{amount: "all", margin: "600px", once: true}}>
         <h4><span>המוצרים</span> <span>שלי</span></h4>
         <div className='my-products-wrapper'>
           <hr/>

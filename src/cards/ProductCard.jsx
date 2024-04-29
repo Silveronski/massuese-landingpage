@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProductCard = ({imgUrl, productName, productDescription}) => {
   return (
     <div className='my-product'>

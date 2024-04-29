@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Logo from '../assets/images/Logo.png';
 import close from '../assets/images/close.png';
 import hamburger from '../assets/images/hamburger.png';
@@ -98,7 +98,7 @@ const Navbar = () => {
                 <li onClick={() => handleNavbarNavigation("services")}>שירותים</li>
                 <li onClick={() => handleNavbarNavigation("treatments")}>טיפולים</li>
                 <li onClick={() => handleNavbarNavigation("about")}>עליי</li>                    
-                <li className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>              
+                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>              
             </ul>
         </nav>
     </header>

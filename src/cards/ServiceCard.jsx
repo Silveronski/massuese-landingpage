@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Service = ({imgUrl, serviceName, serviceDescription}) => {
+const ServiceCard = ({imgUrl, serviceName, serviceDescription}) => {
   return (
     <div className='service-card'>
         <img src={imgUrl} alt=""/>
@@ -10,4 +8,4 @@ const Service = ({imgUrl, serviceName, serviceDescription}) => {
   )
 }
 
-export default Service
+export default ServiceCard

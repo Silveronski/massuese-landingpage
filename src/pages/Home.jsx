@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Contact from '../components/Contact';
-import Body from '../components/Body';
+import Navbar from '../layout/Navbar'
+import Contact from '../layout/Contact';
+import Body from '../layout/Body';
 import whatsapp from '../assets/images/whatsapp.png';
 
 const Home = () => {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TreatmentCard = ({ImageUrl, TreatmentName, TreatmentDescreption}) => {
   return (
     <div className='treatment-card'>

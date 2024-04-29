@@ -9,7 +9,7 @@ const Gallery = () => {
     variants={downToUpVariants}
     initial="notInView"
     whileInView="inView"
-    viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "250px" : "0px"}}>
+    viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "250px" : "450px"}}>
     <div className='gallery-wrapper'>
       {[...Array(9)].map((_, index) => (
         <img key={index} src={ImgUrls[index]} alt=""/>

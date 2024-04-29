@@ -33,7 +33,7 @@ export const carouselInfoVariants = {
 export const downToUpVariants = {
     notInView: {
       opacity: 0,  
-      y: "3vw",
+      y: window.innerWidth > 480 ? "3vw" : "-80vw",
     }, 
     inView:{
       opacity: 1,

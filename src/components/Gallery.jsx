@@ -1,22 +1,21 @@
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/Variants';
-import { ImgUrls } from '../utils/GalleryImgUrls';
+import { downToUpVariants } from '../utils/variants';
+import { ImgUrls } from '../utils/galleryImgUrls';
 
 const Gallery = () => {
-  return (
-    <motion.section
-    className='gallery-container'
-    variants={downToUpVariants}
-    initial="notInView"
-    whileInView="inView"
-    viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "17%" : "450px"}}>
-    <div className='gallery-wrapper'>
-      {[...Array(9)].map((_, index) => (
-        <img key={index} src={ImgUrls[index]} alt=""/>
-      ))}
-    </div>
-  </motion.section>
-  )
+    return (
+        <motion.section
+            className='gallery-container'
+            variants={downToUpVariants}
+            initial="notInView"
+            whileInView="inView"
+            viewport={{amount: "some", once: true, margin: window.innerWidth > 480 ? "-20%" : "0%"}}>
+            <div className='gallery-wrapper'>
+            {[...Array(9)].map((_, index) => (
+                <img key={index} src={ImgUrls[index]} alt=""/>
+            ))}
+            </div>
+        </motion.section>
+    )
 }
-
 export default Gallery

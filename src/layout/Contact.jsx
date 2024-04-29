@@ -27,22 +27,26 @@ const Contact = () => {
             <ul>
               <li>
                 <a href="https://wa.me/972547933887" target="_blank">וואטסאפ</a>
-                <img src={whatsapp} alt="" /> 
+                <img src={whatsapp} alt="" 
+                  onClick={() => window.open("https://wa.me/972547933887", "_blank")} /> 
               </li>
 
               <li>
                 <a href="https://www.instagram.com/annalev_massage_theraphy/" target="_blank">אינסטגרם</a>
-                <img src={instagram} alt="" />
+                <img src={instagram} alt=""
+                  onClick={() => window.open("https://www.instagram.com/annalev_massage_theraphy/", "_blank")}/>
               </li>
 
               <li>
                 <a href="https://www.facebook.com/AnnaMassageAndAroma" target="_blank">פייסבוק</a>
-                <img src={facebook} alt="" />
+                <img src={facebook} alt=""
+                  onClick={() => window.open("https://www.facebook.com/AnnaMassageAndAroma", "_blank")}/>
               </li>
 
               <li>
                 <a href="mailto:annalev2222@gmail.com">אימייל</a>
-                <img src={gmail} alt="" />
+                <img src={gmail} alt=""
+                  onClick={() => window.open("mailto:annalev2222@gmail.com", "_blank")}/>
               </li>
             </ul>
           </div>

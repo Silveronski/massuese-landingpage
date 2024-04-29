@@ -3,7 +3,7 @@ import home from '../assets/images/home.png';
 import running from '../assets/images/running.png';
 import ServiceCard from '../cards/ServiceCard';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/Variants';
+import { downToUpVariants } from '../utils/variants';
 
 const Services = () => {
   return (
@@ -12,7 +12,7 @@ const Services = () => {
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "13%" : "650px"}}>
+        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "13%" : "120%"}}>
         <h3><span>שירותים</span> <span>נוספים</span></h3>
         <hr/>
 
@@ -20,14 +20,14 @@ const Services = () => {
           <ServiceCard imgUrl={pregnant} serviceName="עיסוי לנשים בהריון"
             serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
             הרפיה ושחרור שרירים, שיפור זרימת הדם
-            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
-          />
+            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."/>
+          
 
           <ServiceCard imgUrl={home} serviceName="הגעה עד הבית"
             serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
             הרפיה ושחרור שרירים, שיפור זרימת הדם
-            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
-          />
+            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."/>
+          
           
           <ServiceCard imgUrl={running} serviceName="עיסוי לספורטאים"
             serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,

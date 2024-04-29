@@ -59,8 +59,8 @@ const Navbar = () => {
         break;
 
       case "treatments":
-      offset = document.querySelector('.treatments-container').offsetTop;
-      break;
+        offset = document.querySelector('.treatments-container').offsetTop;
+        break;
 
       case "about":
         offset = document.querySelector('.aboutMe-container').offsetTop;

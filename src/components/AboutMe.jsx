@@ -1,6 +1,6 @@
 import closeUp from '../assets/images/closeUp.png';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/Variants';
+import { downToUpVariants } from '../utils/variants';
 
 const AboutMe = () => {
   return (
@@ -10,7 +10,7 @@ const AboutMe = () => {
           variants={downToUpVariants}
           initial="notInView"
           whileInView="inView"
-          viewport={{amount: "all", once: true, margin: "13%"}}>         
+          viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "13%" : "60%"}}>         
           <h2><span>קצת</span> <span>עליי</span></h2>
           <hr/>
           <div className='content'>

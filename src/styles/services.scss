@@ -65,11 +65,15 @@
             }
             h4{
                 font-size: 1.8rem;
+                @include tablet{
+                    font-size: 1.6rem;
+                }
             }
             p{
                 @include tablet{
-                    padding-left: 1.2rem;
-                    padding-right: 1.2rem;
+                    padding-left: 0.8rem;
+                    padding-right: 0.8rem;
+                    font-size: 1.1rem;
                 }
                 @include mobile{
                     padding: 0;

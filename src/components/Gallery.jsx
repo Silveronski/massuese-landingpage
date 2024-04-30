@@ -5,7 +5,7 @@ import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Gallery = () => {
 
-    const viewportMargin = useResizeWindowListener({mobileMargin: 0, tabletMargin: -2, laptopMargin: -9, desktopMargin: 0});
+    const viewportMargin = useResizeWindowListener({mobileMargin: 0, tabletMargin: -20, laptopMargin: -9, desktopMargin: 0});
     
     return (
         <motion.section

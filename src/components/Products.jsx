@@ -8,7 +8,7 @@ import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Products = () => {
 
-  const viewportMargin = useResizeWindowListener({mobileMargin: 198, tabletMargin: 170, laptopMargin: 107, desktopMargin: 61});
+  const viewportMargin = useResizeWindowListener({mobileMargin: 198, tabletMargin: 65, laptopMargin: 107, desktopMargin: 61});
 
   return (
     <motion.section

@@ -16,7 +16,7 @@
         width: 100%;
         @include mobile{
             top: 15%;
-            width: 70%;
+            width: 80%;
         }
         img{       
             opacity: 0.8;
@@ -36,7 +36,7 @@
             font-size: 3.5rem;
             margin-bottom: 0;
             @include mobile{
-                font-size: 2.7rem;
+                font-size: 2.8rem;
             }
         }
         p{
@@ -56,7 +56,7 @@
             outline: none;
             border: $greenColor 3.5px solid;
             border-radius: 25px;
-            font-size: 1.5500rem;
+            font-size: 1.6200rem;
             transition: 0.5s;
             margin-top: 0.5%;
             font-weight: 600;
@@ -66,7 +66,7 @@
                 transform: scale(1.07);
             } 
             @include mobile{
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 padding: 5px 45px;
             }                
         }

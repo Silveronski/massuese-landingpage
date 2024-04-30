@@ -5,7 +5,7 @@ import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const AboutMe = () => {
 
-  const viewportMargin = useResizeWindowListener({mobileMargin: 60, tabletMargin: 50, laptopMargin: 28, desktopMargin: 13});
+  const viewportMargin = useResizeWindowListener({mobileMargin: 70, tabletMargin: 50, laptopMargin: 28, desktopMargin: 13});
 
   return (
     <section className='aboutMe-container'>                   

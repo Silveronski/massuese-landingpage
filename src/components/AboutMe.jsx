@@ -1,8 +1,12 @@
 import closeUp from '../assets/images/closeUp.png';
 import { motion } from 'framer-motion';
 import { downToUpVariants } from '../utils/Variants';
+import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const AboutMe = () => {
+
+  const viewportMargin = useResizeWindowListener({mobileMargin: 60, tabletMargin: 50, laptopMargin: 28, desktopMargin: 13});
+
   return (
     <section className='aboutMe-container'>                   
         <motion.div
@@ -10,8 +14,8 @@ const AboutMe = () => {
           variants={downToUpVariants}
           initial="notInView"
           whileInView="inView"
-          viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "13%" : "60%"}}>         
-          <h2><span>קצת</span> <span>עליי</span></h2>
+          viewport={{amount: "all", once: true, margin: viewportMargin}}>         
+          <h2><span>קצת</span> <span>עליי</span></h2> 
           <hr/>
           <div className='content'>
             <img src={closeUp} alt=""/>

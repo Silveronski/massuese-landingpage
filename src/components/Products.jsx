@@ -4,15 +4,19 @@ import serum from '../assets/images/serum.png';
 import ProductCard from '../cards/ProductCard';
 import { motion } from 'framer-motion';
 import { downToUpVariants } from '../utils/Variants';
+import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Products = () => {
+
+  const viewportMargin = useResizeWindowListener({mobileMargin: 198, tabletMargin: 170, laptopMargin: 107, desktopMargin: 61});
+
   return (
     <motion.section
         className='my-products-container'
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "61%" : "198%"}}>
+        viewport={{amount: "all", once: true, margin: viewportMargin}}>
         <h4><span>המוצרים</span> <span>שלי</span></h4>
         <div className='my-products-wrapper'>
           <hr/>

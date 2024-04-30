@@ -4,15 +4,19 @@ import running from '../assets/images/running.png';
 import ServiceCard from '../cards/ServiceCard';
 import { motion } from 'framer-motion';
 import { downToUpVariants } from '../utils/Variants';
+import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Services = () => {
+  
+  const viewportMargin = useResizeWindowListener({mobileMargin: 120, tabletMargin: 100, laptopMargin: 42, desktopMargin: 22});
+
   return (
     <motion.section
         className='services-container'
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "22%" : "120%"}}>
+        viewport={{amount: "all", once: true, margin: viewportMargin}}>
         <h3><span>שירותים</span> <span>נוספים</span></h3>
         <hr/>
 

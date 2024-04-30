@@ -5,15 +5,19 @@ import rekamot from '../assets/images/rekamot.png';
 import TreatmentCard from '../cards/TreatmentCard';
 import { motion } from 'framer-motion';
 import { downToUpVariants } from '../utils/Variants';
+import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Treatments = () => {
+
+  const viewportMargin = useResizeWindowListener({mobileMargin: 155, tabletMargin: 130, laptopMargin: 71.5, desktopMargin: 22});
+
   return (
     <motion.section 
         className='treatments-container'
         variants={downToUpVariants}
         initial="notInView"
         whileInView="inView"
-        viewport={{amount: "all", once: true, margin: window.innerWidth > 480 ? "22%" : "155%"}}>
+        viewport={{amount: "all", once: true, margin: viewportMargin}}>
         <h3><span>סוגי</span> <span>טיפולי</span> <span>מגע</span></h3>
         <div className='treatments-wrapper'>          
           <hr />

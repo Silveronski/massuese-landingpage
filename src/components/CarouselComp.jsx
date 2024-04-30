@@ -2,6 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import one from '../assets/images/one.jpg';
 import two from '../assets/images/two.jpg';
 import three from '../assets/images/three.jpg';
+import Logo from '../assets/images/Logo.png';
 import { motion } from 'framer-motion';
 import { carouselImgVariants, carouselInfoVariants } from '../utils/Variants';
 
@@ -14,6 +15,7 @@ const CarouselComp = () => {
         initial="hidden"
         animate="show"
         className='info'>
+        <img src={Logo} alt="" />
         <h1 >אנה לב</h1>
         <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
         <button         

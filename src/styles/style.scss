@@ -12,11 +12,16 @@
     position: relative;
     @include mobile{
         overflow-x: hidden;
-    }
-    
+    }  
     .leaf{
         position: absolute;      
         width: 17vw;
+        @include tablet{
+            display: none;
+        }
+        @include mobile{
+            display: none;
+        }
     }
     #leaf1{
         width: 13vw;

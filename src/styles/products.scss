@@ -140,6 +140,7 @@
                 }
                 p{
                     direction: rtl;
+                    text-wrap: pretty;
                     font-size: 1.3rem; 
                     @include mobile{                       
                         margin-top: 1%;

@@ -44,15 +44,15 @@
             align-items: center;
             transition: 0.5s;
             &:hover{
-                transform: scale(1.02); 
-                img{
-                    border-bottom: 4px solid $greenColor;
-                }          
+                transform: scale(1.02);                  
             }
-            img{
+            &:hover .img-container::before {              
+                transform: scaleX(1);
+            }
+            .img-container {
+                position: relative;
                 width: 6vw;
-                margin-bottom: 1.3vh;
-                padding-bottom: 0.8vh;              
+                margin-bottom: 1vh;
                 @include laptop{
                     width: 9vw;
                 }
@@ -62,7 +62,32 @@
                 @include mobile{
                     width: 35vw;
                 }
-            }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 5px;
+                    background-color: $greenColor;
+                    bottom: 0;
+                    left: 0;
+                    transform: scaleX(0);
+                    transition: transform .3s ease-in-out;
+                }
+                img{
+                    position: relative;
+                    width: 6vw;            
+                    padding-bottom: 1.2vh;       
+                    @include laptop{
+                        width: 9vw;
+                    }
+                    @include tablet{
+                        width: 12vw;
+                    }
+                    @include mobile{
+                        width: 35vw;
+                    }
+                }
+            }         
             h4{
                 font-size: 1.8rem;
                 @include tablet{
@@ -70,6 +95,12 @@
                 }
             }
             p{
+                text-wrap: pretty;
+                direction: rtl;
+                text-align: center;
+                font-size: 1.3rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
                 @include tablet{
                     padding-left: 0.8rem;
                     padding-right: 0.8rem;
@@ -78,12 +109,7 @@
                 @include mobile{
                     padding: 0;
                 }
-                direction: rtl;
-                text-align: center;
-                font-size: 1.3rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
             }
-        }
+        }       
     }
 }

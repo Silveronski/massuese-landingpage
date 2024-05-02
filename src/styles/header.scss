@@ -16,7 +16,7 @@ header{
         display: block;
         z-index: 10;
         width: 100%;
-        background-color: $greenColor; 
+        background-color: rgba($color: $greenColor, $alpha: 0.8500); 
         font-family: Rubik;   
         @keyframes slideInFromAbove {
             0%{

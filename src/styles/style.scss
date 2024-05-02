@@ -13,6 +13,23 @@
     @include mobile{
         overflow-x: hidden;
     }
+    
+    .leaf{
+        position: absolute;      
+        width: 17vw;
+    }
+    #leaf1{
+        width: 13vw;
+        top: 25%;
+        right: 1.7%;
+    }
+    #leaf2{
+        width: 21vw;
+        top: 33.5%;
+        left: -4.6%;
+        rotate: -21deg;
+    }
+    
     .whatsapp-icon{
         position: fixed;
         right: 0.5%;

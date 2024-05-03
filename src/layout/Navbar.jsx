@@ -25,7 +25,7 @@ const Navbar = () => {
       setTimeout(() => {
         imgRef.current.src = close; 
         imgRef.current.style.width = '35px';       
-      }, 150);
+      }, 400);
     }
   }
 
@@ -45,27 +45,7 @@ const Navbar = () => {
 
   const handleNavbarNavigation = (headerClicked) => {
     let offset = 0;
-    switch (headerClicked) {
-      case "contact":
-        offset = document.querySelector('.contact-us-container').offsetTop;
-        break;
-
-      case "products":
-        offset = document.querySelector('.my-products-container').offsetTop;
-        break;
-
-      case "services":
-        offset = document.querySelector('.services-container').offsetTop;
-        break;
-
-      case "treatments":
-        offset = document.querySelector('.treatments-container').offsetTop;
-        break;
-
-      case "about":
-        offset = document.querySelector('.aboutMe-container').offsetTop;
-        break;
-    }   
+    if (headerClicked) offset = document.querySelector(headerClicked).offsetTop;
 
     window.scrollTo({
       top: offset - document.querySelector('.main-navbar').offsetHeight,
@@ -93,12 +73,12 @@ const Navbar = () => {
         <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
-                <li onClick={() => handleNavbarNavigation("contact")}>צור קשר</li>
-                <li onClick={() => handleNavbarNavigation("products")}>מוצרים</li>
-                <li onClick={() => handleNavbarNavigation("services")}>שירותים</li>
-                <li onClick={() => handleNavbarNavigation("treatments")}>טיפולים</li>
-                <li onClick={() => handleNavbarNavigation("about")}>עליי</li>                    
-                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>              
+                <li onClick={() => handleNavbarNavigation(".contact-us-container")}>צור קשר</li>
+                <li onClick={() => handleNavbarNavigation(".my-products-container")}>מוצרים</li>
+                <li onClick={() => handleNavbarNavigation(".services-container")}>שירותים</li>
+                <li onClick={() => handleNavbarNavigation(".treatments-container")}>טיפולים</li>
+                <li onClick={() => handleNavbarNavigation(".aboutMe-container")}>עליי</li>                    
+                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>             
             </ul>
         </nav>
     </header>

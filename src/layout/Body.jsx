@@ -5,9 +5,6 @@ import Treatments from '../components/Treatments';
 import Services from '../components/Services';
 import Products from '../components/Products';
 import Gallery from '../components/Gallery';
-import leaf1 from '../assets/images/leaf1.png';
-import leaf2 from '../assets/images/leaf2.png';
-import leaf3 from '../assets/images/leaf3.png';
 
 const Body = () => {
   return (
@@ -18,8 +15,6 @@ const Body = () => {
       <Services/>
       <Products/>
       <Gallery/>
-      <img className='leaf' id='leaf1' src={leaf2} alt="" />
-      <img className='leaf' id='leaf2' src={leaf1} alt="" />
     </main>
   )
 }

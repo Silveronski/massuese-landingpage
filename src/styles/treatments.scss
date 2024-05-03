@@ -74,7 +74,7 @@
             
             &:hover{
                 &::after{
-                    transform: scale(1,1);
+                    transform: scale(1.1);
                     transform-origin: top left;
                 }                   
                 img{
@@ -82,7 +82,7 @@
                     color: $greenColor;                       
                 }
                 p{
-                    transform: scale(1.05);                     
+                    transform: scale(1.03);                     
                 }
             }
             &::after{
@@ -104,16 +104,17 @@
             img{
                 transition: 0.3s;
                 margin-top: 1.5%; 
-                width: 65px;
+                width: 75px;
                 background-color: $greenColor;
                 padding: 8px;
                 border-radius: 50%;
                 border: $lightBlack 2px solid;                  
             }
             h4{
+                margin-top: 5px;
                 text-align: center;
                 font-size: 1.7rem;
-                margin-bottom: 0;
+                margin-bottom: -6px;
             }
             p{
                 text-align: center;
@@ -121,7 +122,7 @@
                 text-wrap: pretty;
                 font-size: 1.2300rem;
                 padding: 2px 5px;
-                transition: 0.3s;                                
+                transition: 0.3s;                                                      
             }
         }            
     }

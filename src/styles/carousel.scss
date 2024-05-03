@@ -52,6 +52,7 @@
             }
         }
         button{
+            position: relative;
             background: transparent;
             color: white;
             padding: 5px 55px;
@@ -62,8 +63,28 @@
             transition: 0.5s;
             margin-top: 0.5%;
             font-weight: 600;
-            &:hover{
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                right: 50%;
+                border-radius: 18px;
+                transition: 0.5s all ease;            
+                bottom: 0;
+                opacity: 0;            
                 background-color: $greenColor;
+                z-index: -2;
+            }
+            &:hover {
+                &:before {
+                  transition: 0.5s all ease;
+                  left:0;
+                  right:0;
+                  opacity:1;
+                }
+            }
+            &:hover{
                 color: $lightBlack;
                 transform: scale(1.07);
             } 

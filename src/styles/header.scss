@@ -60,9 +60,25 @@ header{
                 cursor: pointer;
                 font-size: 1.3rem;
                 transition: 0.5s;
+                position: relative;
                 &:hover{
-                    color: rgba(0, 0, 0, 0.551);
+                    color: rgba(0, 0, 0, 0.632);
+                }                        
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 5px;
+                    height: 3px;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.551);
+                    transition: all 0.4s;
+                    pointer-events: none;
+                    transform: scaleX(0);
                 }
+                &:hover::after{
+                    transform: scaleX(1);
+                }  
                 @include mobile{
                     padding: 1px;                
                     text-align: center;

@@ -75,7 +75,7 @@ export const treatmentCardsVariants = {
 export const productCardsVariants = {
   notInView: {
     opacity: 0,
-    x: "-10vw"     
+    x: "-15vw"     
   }, 
   inView: {
     opacity: 1,  

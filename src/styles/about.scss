@@ -34,10 +34,11 @@
                 height: 250px;
                 border-radius: 50%;
                 transition: 0.5s;
-                align-self: center;
+                align-self: center;         
                 cursor: pointer;
                 &:hover{
                     border-radius: 15%;
+                    scale: 1.03;
                 }
                 @include laptop{
                     width: 190px;

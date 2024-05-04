@@ -3,7 +3,7 @@ import soaps from '../assets/images/soaps.png';
 import serum from '../assets/images/serum.png';
 import ProductCard from '../cards/ProductCard';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/Variants';
+import { staggerChildrenVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Products = () => {
@@ -13,7 +13,7 @@ const Products = () => {
   return (
     <motion.section
         className='my-products-container'
-        variants={downToUpVariants}
+        variants={staggerChildrenVariants}
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>

@@ -4,7 +4,7 @@ import face from '../assets/images/face.png';
 import rekamot from '../assets/images/rekamot.png';
 import TreatmentCard from '../cards/TreatmentCard';
 import { motion } from 'framer-motion';
-import { downToUpVariants } from '../utils/Variants';
+import { staggerChildrenVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
 
 const Treatments = () => {
@@ -14,7 +14,7 @@ const Treatments = () => {
   return (
     <motion.section 
         className='treatments-container'
-        variants={downToUpVariants}
+        variants={staggerChildrenVariants}
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>

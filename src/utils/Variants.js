@@ -44,3 +44,44 @@ export const downToUpVariants = {
       },
     }
 }
+
+export const staggerChildrenVariants = {
+  notInView: {
+    opacity: 0,  
+    y: window.innerWidth > 480 ? "3vw" : "50px",
+  }, 
+  inView: {
+    opacity: 1,
+    y: "0vw",
+    transition: {
+      duration: 0.8,
+      ease: [0.5, 0.71, 0.2, 1.01],
+      staggerChildren: 0.23
+    },
+  }
+}
+
+export const treatmentCardsVariants = {
+  notInView: {
+    opacity: 0,
+    y: window.innerWidth > 480 ? "3vw" : "50px",     
+  }, 
+  inView: {
+    opacity: 1,  
+    y: "0vw",
+  }
+}
+
+export const productCardsVariants = {
+  notInView: {
+    opacity: 0,
+    x: "-10vw"     
+  }, 
+  inView: {
+    opacity: 1,  
+    x: "0vw",
+    transition: {
+      delay: -0.4,
+    },
+  }
+}

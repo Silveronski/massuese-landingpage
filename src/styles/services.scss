@@ -51,7 +51,7 @@
             }
             .img-container {
                 position: relative;
-                width: 6vw;
+                width: 9.6em;
                 margin-bottom: 1vh;
                 @include laptop{
                     width: 9vw;
@@ -75,7 +75,7 @@
                 }
                 img{
                     position: relative;
-                    width: 6vw;            
+                    width: 9.6em;            
                     padding-bottom: 1.2vh;       
                     @include laptop{
                         width: 9vw;

@@ -95,15 +95,9 @@
                 width: 90%;              
             }
             @include mobile{
-                width: 95%;
-                flex-direction: column;
-                border: $greenColor 2px solid;
-                border-radius: 20px;
+                width: 90%;
+                flex-direction: column;              
                 box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.559);
-                &:hover{
-                    transform: none;
-                    box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.559);
-                }
             }   
                 
             &:nth-child(odd){

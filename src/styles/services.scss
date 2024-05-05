@@ -6,14 +6,6 @@
     justify-content: center;  
     font-family: Rubik;     
     h3{
-        text-align: center;          
-        font-style: italic;
-        font-size: 3rem;          
-        letter-spacing: 1px;
-        color: rgb(93, 92, 92);
-        span:nth-child(2){
-            color: $greenColor;
-        }
         @include mobile{
             margin-bottom: 10px;           
         }
@@ -94,9 +86,7 @@
                     font-size: 1.6rem;
                 }
             }
-            p{
-                text-wrap: pretty;
-                direction: rtl;
+            p{                            
                 text-align: center;
                 font-size: 1.3rem;
                 padding-left: 2rem;

@@ -11,16 +11,8 @@
         @include tablet{
             width: 90%;              
         }
-        h2{
-            text-align: center;
+        h2{      
             margin-top: 7%;
-            font-size: 3rem;           
-            letter-spacing: 1px;
-            font-style: italic;
-            color: $grayish;
-            span:last-child{
-                color: $greenColor;
-            }
         }
         .content{
             display: flex;
@@ -51,8 +43,6 @@
                 }
             }
             p{
-                direction: rtl;
-                text-wrap: pretty;
                 font-size: 1.6rem;
                 padding-left: 2.5rem;
                 padding-right: 2.5rem;

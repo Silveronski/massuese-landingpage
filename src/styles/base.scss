@@ -25,6 +25,22 @@ body{
     padding: 0;
     box-sizing: border-box; 
 
+    .section-headline{
+        text-align: center;          
+        font-size: 3rem;           
+        font-style: italic;
+        color: $grayish;
+        letter-spacing: 1px;
+        span:nth-child(2){
+            color: $greenColor;
+        }
+    }
+
+    p{
+        direction: rtl;
+        text-wrap: pretty;  
+    }
+
     &::-webkit-scrollbar {
         width: 0.6em; 
     }

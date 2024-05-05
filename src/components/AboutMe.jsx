@@ -15,7 +15,7 @@ const AboutMe = () => {
           initial="notInView"
           whileInView="inView"
           viewport={{amount: "all", once: true, margin: viewportMargin}}>         
-          <h2><span>קצת</span> <span>עליי</span></h2> 
+          <h2 className='section-headline'><span>קצת</span> <span>עליי</span></h2> 
           <hr/>
           <div className='content'>
             <img src={closeUp} alt=""/>

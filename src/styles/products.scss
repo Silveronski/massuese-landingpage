@@ -4,18 +4,8 @@
     flex-direction: column;
     align-items: center;
     font-family: Rubik;
-    h4{
-        text-align: center;
-        font-size: 3rem;
-        font-style: italic;
-        color: $grayish;
-        letter-spacing: 1px;
+    h4{     
         margin-bottom: 0;
-        span{
-            &:nth-child(2){
-                color: $greenColor;
-            }
-        }
         @include mobile{
             margin-top: 35px;          
         }
@@ -134,8 +124,6 @@
                     }                      
                 }
                 p{
-                    direction: rtl;
-                    text-wrap: pretty;
                     font-size: 1.3rem; 
                     @include mobile{                       
                         margin-top: 1%;

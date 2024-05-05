@@ -17,7 +17,7 @@ const Products = () => {
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>
-        <h4><span>המוצרים</span> <span>שלי</span></h4>
+        <h4 className='section-headline'><span>המוצרים</span> <span>שלי</span></h4>
         <div className='my-products-wrapper'>
           <hr/>
 

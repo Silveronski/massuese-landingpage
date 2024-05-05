@@ -17,7 +17,7 @@ const Services = () => {
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>
-        <h3><span>שירותים</span> <span>נוספים</span></h3>
+        <h3 className='section-headline'><span>שירותים</span> <span>נוספים</span></h3>
         <hr/>
 
         <div className='services-wrapper'>        

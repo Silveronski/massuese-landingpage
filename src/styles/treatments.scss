@@ -25,7 +25,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         @include laptop{
-            width: 90%;           
+            width: 85%;           
         }
         @include tablet{
             width: 95%;

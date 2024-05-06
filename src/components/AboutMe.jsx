@@ -1,7 +1,8 @@
-import closeUp from '../assets/images/closeUp.png';
+import closeUp from '../assets/images/closeUp.jpeg';
 import { motion } from 'framer-motion';
 import { downToUpVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
+import content from '../site-content-json/content.json';
 
 const AboutMe = () => {
 
@@ -15,19 +16,11 @@ const AboutMe = () => {
           initial="notInView"
           whileInView="inView"
           viewport={{amount: "all", once: true, margin: viewportMargin}}>         
-          <h2 className='section-headline'><span>קצת</span> <span>עליי</span></h2> 
+          <h2 className='section-headline'><span>About</span> <span>Me</span></h2> 
           <hr/>
           <div className='content'>
+            <p>{content.aboutMe.paragraph}</p>
             <img src={closeUp} alt=""/>
-            <p>הגעתי לעולם הקוסמטיקה בגיל מאוד צעיר בערך בשנות ה20... , 
-              אהבתי טיפוח וכל דבר שהיה אפשר להוסיף לעולם היופי. 
-              בגיל ההתבגרות סבלתי מאקנה קשה בכל הגוף, 
-              מה שלא עשיתי ואיפה שלא הלכתי שום דבר לא עזר. 
-              בדרך נולדה לי ילדה והפגמנטציה לא אחרה להגיע ואמרת סטופ... פה 
-              אני כבר התחלתי לחקור איך אני יכולה לעזור לעצמי בלי התערבות של 
-              רופאי עור שגם ככה לא עזרו. באותו זמן התחלתי את לימודי 
-              הקוסמטיקה שלי, הייתי שכירה כ 5 שנים וצברתי נסיון וידע רב. היום אני 
-              בעלת עסק פרטי בחדרה ורוצה לעזור לכל אחת או אחד שנתקל בבעיה.</p>
           </div>
         </motion.div>
       </section>

@@ -18,7 +18,7 @@
             display: flex;
             gap: 35px;
             @include mobile{
-                flex-direction: column; 
+                flex-direction: column-reverse; 
                 gap: 25px;               
             }
             img{

@@ -7,48 +7,34 @@
         flex-direction: column;
         align-items: center;
         user-select: none;
-        top: 18%;
+        top: 40%;
         left: 50%;
         z-index: 2;
-        transform: translateX(-50%);
         color: white;
         text-align: center;
-        width: 100%;
+        width: 100%;  
         @include laptop{
-            top: 10%;
-        }
-        @include mobile{
-            top: 13%;
-            width: 80%;
-        }
-        img{       
-            opacity: 0.8;
-            margin-bottom: 0.3%;
-            @include laptop{
-                width: 22rem;
-            }
-            @include tablet{
-                width: 23rem;
-            }
-            @include mobile{
-                margin-bottom: 4%;
-                width: 15rem;
-            }
-        }  
+            top: 35%;        
+        }     
+        @include mobile{        
+            width: 70%;
+            top: 35%;
+        }     
         h1{
-            font-size: 3.5rem;
+            font-size: 6.5rem;
             margin-bottom: 0;
             @include mobile{
-                font-size: 2.8rem;
+                font-size: 4rem;
             }
         }
         p{
             margin-top: 0;
-            font-size: 1.9rem;
+            font-size: 2.5rem;
             font-weight: 600;
-            @include mobile{
-                font-size: 1.4rem;
-                margin-bottom: 15px;
+            @include mobile{             
+                text-wrap: nowrap;
+                font-size: 1.3rem;
+                margin-bottom: 15px;               
             }
         }
         button{
@@ -61,7 +47,7 @@
             border-radius: 25px;
             font-size: 1.6200rem;
             transition: 0.5s;
-            margin-top: 0.5%;
+            margin-top: 1%;
             font-weight: 600;
             &:before {
                 content: '';

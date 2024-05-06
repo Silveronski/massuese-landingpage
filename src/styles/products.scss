@@ -111,11 +111,10 @@
             div{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                text-align: right;
-                padding: 1rem 2rem;
-                    
-                h5{
+                justify-content: center;               
+                padding: 1rem 2rem;  
+                               
+                h5{                  
                     margin-bottom: 2%;
                     font-size: 1.8rem; 
                     @include mobile{                       

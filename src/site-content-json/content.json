@@ -1,0 +1,59 @@
+{
+    "aboutMe": {
+        "paragraph": "As a dedicated masseur, I am committed to providing holistic healing and relaxation to my clients. With over a decade of experience in the art of massage therapy, I bring a deep understanding of the body's intricate mechanisms and how to alleviate tension and stress effectively. My approach combines traditional techniques with modern practices, ensuring each session is tailored to the unique needs of every individual. My ultimate goal is to cultivate a sense of balance and harmony, leaving each client feeling rejuvenated, and ready to embrace life with renewed energy."
+    },
+    "treatments": {
+        "firstTreatment": {
+            "name": "Swedish Massage",
+            "description": "Experience the ultimate relaxation with gentle strokes and soothing techniques aimed at improving circulation and reducing muscle tension. Ideal for those seeking stress relief and overall relaxation."
+        },
+        "secondTreatment": {
+            "name": "Deep Tissue Massage",
+            "description": "Targeting deep layers of muscle and fascia, this therapeutic massage focuses on alleviating chronic pain and releasing muscle knots. Perfect for athletes and individuals with specific areas of tension."
+        },
+        "thirdTreatment": {
+            "name": "Hot Stone Massage",
+            "description": "Indulge in a luxurious treatment that combines the warmth of heated stones with traditional massage techniques. The soothing heat penetrates muscles, promoting deep relaxation and easing muscle stiffness."
+        },
+        "forthTreatment": {
+            "name": "Aromatherapy Massage",
+            "description": "Immerse yourself in the healing power of essential oils, as I incorporate aromatic blends into your massage session. Each oil is carefully selected to enhance relaxation, reduce stress, and uplift your mood."
+        }       
+    },
+    "services": {
+        "firstService": {
+            "name": "Prenatal Massage",
+            "description": "Experience relief from the discomforts of pregnancy with a gentle and nurturing massage designed specifically for expectant mothers. Using safe and effective techniques."
+        },
+        "secondService": {
+            "name": "In-Home Massage",
+            "description": "Enjoy the convenience and comfort of a professional massage in the privacy of your own home. Whether you're a busy professional or a stay-at-home parent, I bring the relaxation to you."
+        },
+        "thirdService": {
+            "name": "Sports Massage",
+            "description": "Tailored to the unique needs of athletes, this specialized massage focuses on improving flexibility, preventing injury, and enhancing athletic performance."
+        }
+    },
+    "products": {
+        "firstProduct": {
+            "name": "Massage Oils",
+            "description": "Elevate your at-home massage experience with our premium selection of therapeutic massage oils. Made from natural ingredients and infused with essential oils, our oils nourish the skin, soothe sore muscles, and enhance relaxation."
+        },
+        "secondProduct": {
+            "name": "Aromatherapy Candles",
+            "description": "Set the mood for relaxation with our hand-poured aromatherapy candles. Crafted from high-quality soy wax and infused with fragrant essential oils, our candles create a serene atmosphere, promoting calmness and tranquility."
+        },
+        "thirdProduct": {
+            "name": "Massage Tools",
+            "description": "Enhance your self-care routine with our range of massage tools designed to relieve tension and promote muscle recovery. From foam rollers to massage balls, our tools target specific areas of the body, helping you maintain optimal health and well-being."
+        }
+
+    },
+    "general":{
+        "name": "Jane Doe",
+        "whatsapp": "https://wa.me/123123123",
+        "facebook": "https://www.facebook.com/test",
+        "instagram": "https://www.instagram.com/test/",
+        "email": "mailto:test@gmail.com"
+    }
+}

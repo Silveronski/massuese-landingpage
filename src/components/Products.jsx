@@ -5,7 +5,7 @@ import ProductCard from '../cards/ProductCard';
 import { motion } from 'framer-motion';
 import { staggerChildrenVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
-
+import content from '../site-content-json/content.json';
 const Products = () => {
 
   const viewportMargin = useResizeWindowListener({mobileMargin: 198, tabletMargin: 65, laptopMargin: 107, desktopMargin: 61});
@@ -17,37 +17,19 @@ const Products = () => {
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>
-        <h4 className='section-headline'><span>המוצרים</span> <span>שלי</span></h4>
+        <h4 className='section-headline'><span>My</span> <span>Products</span></h4>
         <div className='my-products-wrapper'>
           <hr/>
 
-          <ProductCard imgUrl={candle} productName="נרות בעבודת יד"
-            productDescription="מערבבת, מכניסה כוונה, מוזגת, אחד, אחד
-            חומרי הגלם הם הכי איכותיים וידידותיים
-            אשתף בהמשך
-            על החומרים
-            עבורי להכין אותם זה נחת
-            מקווה שהם יכניסו לכל בית וחדר שיגיעו אליו
-            את האנרגיה הזו שאני מביאה בקליניקה
-            של נוכחות, משאלת הלב לאור ושל מרחב בטוח לגוף ולנפש."/>                            
+          <ProductCard imgUrl={candle} productName={content.products.firstProduct.name}
+            productDescription={content.products.firstProduct.description}/>                            
 
-          <ProductCard imgUrl={soaps} productName="סבונים טבעיים בעבודת יד"
-            productDescription="סבונים מוצקים טבעיים בעבודת יד
-            ממש כמו של פעם...
-            הסבונים אקולוגיים ועשויים משמנים וחמאות טבעיות, 
-            הצבעים מתקבלים מחימרים, תבלינים, אבקות צמחיות מיקות ואוקסידים,
-            הניחוחות מתקבלים משמנים ארומטיים איכותיים.
-            הסבונים הטבעיים מטיבים עם העור שלנו, שומרים על שכבת השומן הטבעית שלו, 
-            , אקולוגיים, נעימים כל כך ומקציפים מצויין
-            הניחוחות שלהם אצלי מגיעים מעולם הארומתרפיה."/>                    
+          <ProductCard imgUrl={soaps} productName={content.products.secondProduct.name}
+            productDescription={content.products.secondProduct.description}/>                    
           
 
-          <ProductCard imgUrl={serum} productName="בקבוקוני רסקיו פרחי באך"
-            productDescription="תמציות פרחי באך מותרות לשימוש מגיל 0 עד 120
-            הרסקיו היא פורמולה שיעילה להרגעה 
-            ברגע של מצבים שמכניסים אותנו לטראומה קשה, חדשות קשות מנשוא, 
-            פחד עז, הלם, היסטריה, פאניקה, חרדה קיצונית, מתח גדול בשל
-            מצב או חוויה טראומית וחדשות רעות, אובדן גדול ואבל קשה מנשוא."/>                          
+          <ProductCard imgUrl={serum} productName={content.products.thirdProduct.name}
+            productDescription={content.products.thirdProduct.description}/>                          
                   
         </div>
       </motion.section>

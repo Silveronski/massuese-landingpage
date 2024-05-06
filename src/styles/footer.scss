@@ -80,12 +80,11 @@ footer{
                         display: flex;
                         align-items: center;
                         margin: 6px auto;
-                        gap: 5px;
-                        direction: rtl;
+                        gap: 5px;                       
                         a{
-                            text-align: right;
+                            text-align: left;
                             display: inline-block;
-                            width: 95px;
+                            width: 100px;
                             color: white; 
                             font-size: 1.2rem;                                                                     
                         }

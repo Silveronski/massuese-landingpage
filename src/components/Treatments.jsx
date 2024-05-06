@@ -6,6 +6,7 @@ import TreatmentCard from '../cards/TreatmentCard';
 import { motion } from 'framer-motion';
 import { staggerChildrenVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
+import content from '../site-content-json/content.json';
 
 const Treatments = () => {
 
@@ -18,29 +19,24 @@ const Treatments = () => {
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>
-        <h3 className='section-headline'><span>סוגי</span> <span>טיפולים</span></h3>
+        <h3 className='section-headline'><span>Treatment</span> <span>Types</span></h3>
         <div className='treatments-wrapper'>          
           <hr />
-          <TreatmentCard ImageUrl={sweden} TreatmentName="עיסוי שוודי הוליסטי" 
-            TreatmentDescreption="שיטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
-            הרפיה ושחרור שרירים, שיפור זרימת הדם
-            , שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
+
+          <TreatmentCard ImageUrl={sweden} TreatmentName={content.treatments.firstTreatment.name}
+            TreatmentDescreption={content.treatments.firstTreatment.description}
           />
             
-          <TreatmentCard ImageUrl={rekamot} TreatmentName="עיסוי רקמות עמוק ושיקום" 
-            TreatmentDescreption="טיפול בעיסוי רקמות עמוק לכאבים כרוניים עקב התכווצות שרירים,
-            פציעה פיזית, טווחי תנועה מופחתים או לכידה עצבית. מתאים גם לספורטאים."       
+          <TreatmentCard ImageUrl={rekamot} TreatmentName={content.treatments.secondTreatment.name}
+           TreatmentDescreption={content.treatments.secondTreatment.description}      
           />
 
-          <TreatmentCard ImageUrl={oils} TreatmentName="עיסוי ארומתרפי" 
-            TreatmentDescreption="עיסוי ארומתרפי מלא בחיוניות והרגעה בהתאמה אישית. זהו עיסוי שטחי ועדין,
-            משולב בשמנים ארומטים לטיפול בגוף ובנפש. בהרחה ובמריחה בהתאמה אישית לכל אחד ואחת."                   
+          <TreatmentCard ImageUrl={oils} TreatmentName={content.treatments.thirdTreatment.name}
+            TreatmentDescreption={content.treatments.thirdTreatment.description}                  
           />
 
-          <TreatmentCard ImageUrl={face} TreatmentName="עיסוי פנים יפני קובידו" 
-            TreatmentDescreption="הפנים הם המראה לכל הגוף שלנו, עיסוי זה מביא להרפיה נהדרת של מערכת העצבים, הפגת מתחים עמוקה, 
-            אפקט מתיחה פנים טבעי, מניעת היווצרות קמטים חדשים, 
-            מרגיע מתח שרירי בפנים ובצוואר, גירוי למפתי ומשפיע על איזון האנרגיה בכל הגוף."                            
+          <TreatmentCard ImageUrl={face} TreatmentName={content.treatments.forthTreatment.name}
+           TreatmentDescreption={content.treatments.forthTreatment.description}                    
           />
 
         </div>

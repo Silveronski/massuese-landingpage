@@ -2,9 +2,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import one from '../assets/images/one.jpg';
 import two from '../assets/images/two.jpg';
 import three from '../assets/images/three.jpg';
-import Logo from '../assets/images/Logo.png';
 import { motion } from 'framer-motion';
 import { carouselImgVariants, carouselInfoVariants } from '../utils/Variants';
+import content from '../site-content-json/content.json';
 
 const CarouselComp = () => {
   return (
@@ -15,11 +15,10 @@ const CarouselComp = () => {
         initial="hidden"
         animate="show"
         className='info'>
-        <img src={Logo} alt="" />
-        <h1 >אנה לב</h1>
-        <p>מעסה בכירה ורוקחת טבעית בגישה הוליסטית</p>
+        <h1>{content.general.name}</h1>
+        <p>Senior masseuse and Natural Pharmacist</p>
         <button         
-         onClick={() => window.open("https://wa.me/972547933887", "_blank")}>קבע/י תור
+         onClick={() => window.open("https://wa.me/123123123", "_blank")}>BOOK A VISIT
         </button>
       </motion.div>
 

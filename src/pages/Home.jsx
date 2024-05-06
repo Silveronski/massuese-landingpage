@@ -10,7 +10,7 @@ const Home = () => {
         <Navbar/>
         <Body/>
         <Contact/>
-        <img src={whatsapp} className='whatsapp-icon' onClick={() => window.open("https://wa.me/972547933887", "_blank")} alt=""/>
+        <img src={whatsapp} className='whatsapp-icon' onClick={() => window.open("https://wa.me/123123123", "_blank")} alt=""/>
     </div>
   )
 }

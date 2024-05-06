@@ -5,6 +5,7 @@ import ServiceCard from '../cards/ServiceCard';
 import { motion } from 'framer-motion';
 import { downToUpVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
+import content from '../site-content-json/content.json';
 
 const Services = () => {
   
@@ -17,26 +18,20 @@ const Services = () => {
         initial="notInView"
         whileInView="inView"
         viewport={{amount: "all", once: true, margin: viewportMargin}}>
-        <h3 className='section-headline'><span>שירותים</span> <span>נוספים</span></h3>
+        <h3 className='section-headline'><span>Other</span> <span>Services</span></h3>
         <hr/>
 
         <div className='services-wrapper'>        
-          <ServiceCard imgUrl={pregnant} serviceName="עיסוי לנשים בהריון"
-            serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
-            הרפיה ושחרור שרירים, שיפור זרימת הדם
-            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."/>
+          <ServiceCard imgUrl={pregnant} serviceName={content.services.firstService.name}
+           serviceDescription={content.services.firstService.description}/>
           
 
-          <ServiceCard imgUrl={home} serviceName="הגעה עד הבית"
-            serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
-            הרפיה ושחרור שרירים, שיפור זרימת הדם
-            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."/>
+          <ServiceCard imgUrl={home} serviceName={content.services.secondService.name}
+           serviceDescription={content.services.secondService.description}/>
           
           
-          <ServiceCard imgUrl={running} serviceName="עיסוי לספורטאים"
-            serviceDescription="יטת ריפוי קלאסית להשפעה חיוביות על כל מערכות הגוף,
-            הרפיה ושחרור שרירים, שיפור זרימת הדם
-            שחרור כאבי ראש, האצת חילוף החומרים בגוף, הפגת מתחים והרגעה."
+          <ServiceCard imgUrl={running} serviceName={content.services.thirdService.name}
+            serviceDescription={content.services.thirdService.description}
           />
         </div>
       </motion.section>

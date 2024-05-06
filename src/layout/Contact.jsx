@@ -2,6 +2,7 @@ import instagram from '../assets/images/instagram.png';
 import facebook from '../assets/images/facebook.png';
 import gmail from '../assets/images/gmail.png';
 import whatsapp from '../assets/images/whatsapp.png';
+import content from '../site-content-json/content.json';
 
 const Contact = () => {
   return (
@@ -10,53 +11,53 @@ const Contact = () => {
         <div className='contact-us-wrapper'>
 
           <div>
-            <h5>אנה לב</h5>
+            <h5>{content.general.name}</h5>
             <hr/>
             <p>
-              <span>עיסוי רפואי</span>
-              <span>עיסוי רקמות עמוקות</span>
-              <span>עיסוי פנים הוליסטי</span>
-              <span>רוקחות טבעית</span>
-              <span>תהליכי ריפוי והתמרה</span>
+              <span>Medical Massage</span>
+              <span>Deep Tissue Massage</span>
+              <span>Holistic Face Massage</span>
+              <span>Natural Pharmacist</span>
+              <span>Healing Processes</span>
             </p>
           </div>
 
           <div>
-            <h5>צרו קשר</h5>
+            <h5>Contact Me</h5>
             <hr/>
             <ul>
               <li>
-                <a href="https://wa.me/972547933887" target="_blank">וואטסאפ</a>
+                <a href={content.general.whatsapp} target="_blank">Whatsapp</a>
                 <img src={whatsapp} alt="" 
-                  onClick={() => window.open("https://wa.me/972547933887", "_blank")} /> 
+                  onClick={() => window.open(`${content.general.whatsapp}`, "_blank")} /> 
               </li>
 
               <li>
-                <a href="https://www.instagram.com/annalev_massage_theraphy/" target="_blank">אינסטגרם</a>
+                <a href={content.general.instagram} target="_blank">Instagram</a>
                 <img src={instagram} alt=""
-                  onClick={() => window.open("https://www.instagram.com/annalev_massage_theraphy/", "_blank")}/>
+                  onClick={() => window.open(`${content.general.instagram}`, "_blank")}/>
               </li>
 
               <li>
-                <a href="https://www.facebook.com/AnnaMassageAndAroma" target="_blank">פייסבוק</a>
+                <a href={content.general.facebook} target="_blank">Facebook</a>
                 <img src={facebook} alt=""
-                  onClick={() => window.open("https://www.facebook.com/AnnaMassageAndAroma", "_blank")}/>
+                  onClick={() => window.open(`${content.general.facebook}`, "_blank")}/>
               </li>
 
               <li>
-                <a href="mailto:annalev2222@gmail.com">אימייל</a>
+                <a href={content.general.email}>Email</a>
                 <img src={gmail} alt=""
-                  onClick={() => window.open("mailto:annalev2222@gmail.com", "_blank")}/>
+                  onClick={() => window.open(`${content.general.email}`, "_blank")}/>
               </li>
             </ul>
           </div>
 
-          <div>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3367.092667156156!2d34.88839294303001!
-              3d32.44345427361392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d12e6552b8ebf%3A0x82f516804bff9
-              8fa!2z15TXqNeQ16nXldeg15nXnSAzNCwg15fXk9eo15Q!5e0!3m2!1siw!2sil!4v1713791794913!5m2!1siw!2sil"
-              allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">           
+          <div>        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.29973859
+              9224!2d34.967665959557216!3d32.784310783722255!2m3!1f0!2f0!3f0!3m2!1i1024!2i7
+              68!4f13.1!3m3!1m2!1s0x151dbb4309d76d8d%3A0xb13b7d947c5febf9!2z15DXpteY15PXmdeV158
+              g16HXnteZINei15XXpNeo!5e0!3m2!1siw!2sil!4v1715006101658!5m2!1siw!2sil" 
+              allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
 

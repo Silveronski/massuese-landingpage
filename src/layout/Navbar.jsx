@@ -70,7 +70,7 @@ const Navbar = () => {
         <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
-                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'>Jane Doe - Senior Masseuse</li> 
+                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'>Jane Doe - Masseuse</li> 
                 <li onClick={() => handleNavbarNavigation(".contact-us-container")}>Contact Us</li>
                 <li onClick={() => handleNavbarNavigation(".my-products-container")}>Products</li>
                 <li onClick={() => handleNavbarNavigation(".services-container")}>Services</li>

@@ -9,13 +9,13 @@ $grayish: rgb(93, 92, 92);
 }
 
 @mixin tablet{
-    @media screen and (min-width: 649px) and (max-width: 1206px) {
+    @media screen and (min-width: 649px) and (max-width: 1025px) {
         @content;
     }
 }
 
 @mixin laptop{
-    @media screen and (min-width: 1207px) and (max-width: 1540px) {
+    @media screen and (min-width: 1026px) and (max-width: 1540px) {
         @content;
     }
 }
@@ -33,6 +33,9 @@ body{
         letter-spacing: 1px;
         span:nth-child(2){
             color: $greenColor;
+        }
+        @include mobile{
+            font-size: 2.7rem;
         }
     }
 

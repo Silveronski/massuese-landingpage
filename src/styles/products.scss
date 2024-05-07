@@ -48,7 +48,7 @@
             &:hover{
                 transform: scale(1.0300);
                 z-index: 100;   
-                outline: 2px solid $greenColor;                
+                border: 2px solid $greenColor;                
             } 
             &:hover:nth-child(2){              
                 box-shadow: 0vh 35vh 10vh 20vh rgba(255, 255, 255, 0.705);
@@ -116,8 +116,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;               
-                padding: 1rem 2rem;  
-                               
+                padding: 1rem 2rem;                            
                 h5{                  
                     margin-bottom: 2%;
                     font-size: 1.8rem; 

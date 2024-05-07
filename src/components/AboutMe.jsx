@@ -6,7 +6,7 @@ import content from '../site-content-json/content.json';
 
 const AboutMe = () => {
 
-  const viewportMargin = useResizeWindowListener({mobileMargin: 70, tabletMargin: 13, laptopMargin: 28, desktopMargin: 13});
+  const viewportMargin = useResizeWindowListener({mobileMargin: 70, tabletMargin: 13, laptopMargin: 30, desktopMargin: 13});
 
   return (
     <section className='aboutMe-container'>                   

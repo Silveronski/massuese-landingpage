@@ -10,7 +10,7 @@ import content from '../site-content-json/content.json';
 
 const Treatments = () => {
 
-  const viewportMargin = useResizeWindowListener({mobileMargin: 155, tabletMargin: 45, laptopMargin: 71.5, desktopMargin: 22});
+  const viewportMargin = useResizeWindowListener({mobileMargin: 155, tabletMargin: 45, laptopMargin: 73, desktopMargin: 22});
 
   return (
     <motion.section 

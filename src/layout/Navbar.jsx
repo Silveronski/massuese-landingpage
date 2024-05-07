@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import Logo from '../assets/images/Logo.png';
 import close from '../assets/images/close.png';
 import hamburger from '../assets/images/hamburger.png';
 
@@ -17,15 +16,13 @@ const Navbar = () => {
     }  
     else {
       setIsNavbarOpen(!isNavbarOpen);
-      navbar.current.style.animation = "slideInFromAbove 0.5s ease";
+      navbar.current.style.animation = "slideInFromAbove 0.3s ease";
       navbar.current.style.display = 'block';
+      imgRef.current.src = close; 
+      imgRef.current.style.width = '35px';
       setTimeout(() => {
         navbar.current.style.animation = "";
-      }, 550);
-      setTimeout(() => {
-        imgRef.current.src = close; 
-        imgRef.current.style.width = '35px';       
-      }, 400);
+      }, 550);      
     }
   }
 
@@ -33,7 +30,7 @@ const Navbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
     imgRef.current.src = hamburger;
     imgRef.current.style.width = '45px'; 
-    navbar.current.style.animation = "slideInFromDown 0.7s ease"; 
+    navbar.current.style.animation = "slideInFromDown 0.3s ease"; 
     navbar.current.addEventListener("animationend", onAnimationEnd);     
   }
 
@@ -73,12 +70,12 @@ const Navbar = () => {
         <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
-                <li onClick={() => handleNavbarNavigation(".contact-us-container")}>צור קשר</li>
-                <li onClick={() => handleNavbarNavigation(".my-products-container")}>מוצרים</li>
-                <li onClick={() => handleNavbarNavigation(".services-container")}>שירותים</li>
-                <li onClick={() => handleNavbarNavigation(".treatments-container")}>טיפולים</li>
-                <li onClick={() => handleNavbarNavigation(".aboutMe-container")}>עליי</li>                    
-                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'><img src={Logo} alt=""/> אנה - לב פתוח לגוף ולנפש</li>             
+                <li onClick={() => handleNavbarNavigation()} className='navbar-logo'>Jane Doe - Senior Masseuse</li> 
+                <li onClick={() => handleNavbarNavigation(".contact-us-container")}>Contact Us</li>
+                <li onClick={() => handleNavbarNavigation(".my-products-container")}>Products</li>
+                <li onClick={() => handleNavbarNavigation(".services-container")}>Services</li>
+                <li onClick={() => handleNavbarNavigation(".treatments-container")}>Treatments</li>
+                <li onClick={() => handleNavbarNavigation(".aboutMe-container")}>About</li>                                             
             </ul>
         </nav>
     </header>

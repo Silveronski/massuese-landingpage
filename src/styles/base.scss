@@ -3,13 +3,13 @@ $lightBlack:rgb(57, 56, 56);
 $grayish: rgb(93, 92, 92);
 
 @mixin mobile{
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 648px) {
         @content;
     }
 }
 
 @mixin tablet{
-    @media screen and (min-width: 481px) and (max-width: 1206px) {
+    @media screen and (min-width: 649px) and (max-width: 1206px) {
         @content;
     }
 }

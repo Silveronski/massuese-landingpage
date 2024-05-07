@@ -17,7 +17,6 @@
             top: 35%;        
         }     
         @include mobile{        
-            width: 90%;
             top: 33%;
         }     
         h1{
@@ -39,10 +38,11 @@
                 color: transparent;
                 font-weight: 600;
             }
-            @include mobile{             
-                text-wrap: nowrap;
-                font-size: 1.3rem;
-                margin-bottom: 15px;               
+            @include mobile{                         
+                font-size: 1.2500rem;
+                margin-bottom: 15px;
+                padding-left: 0.1rem; 
+                padding-right: 0.1rem;               
             }
         }
         button{

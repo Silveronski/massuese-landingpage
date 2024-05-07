@@ -18,6 +18,9 @@ header{
         width: 100%;
         background-color: rgba($color: $greenColor, $alpha: 0.8500); 
         font-family: Rubik;   
+        @include mobile{
+            background-color: $greenColor;
+        }
         @keyframes slideInFromAbove {
             0%{
                 top: -100%;

@@ -15,8 +15,8 @@ const CarouselComp = () => {
         initial="hidden"
         animate="show"
         className='info'>
-        <h1>{content.general.name}</h1>
-        <p>Senior masseuse & Natural Pharmacist</p>
+        <h1>{content.general.name}</h1>          
+        <p><span>Senior masseuse</span> <i>&</i> <span>Natural Pharmacist</span></p>
         <button         
          onClick={() => window.open("https://wa.me/123123123", "_blank")}>BOOK A VISIT
         </button>

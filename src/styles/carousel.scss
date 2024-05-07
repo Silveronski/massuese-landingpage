@@ -17,12 +17,13 @@
             top: 35%;        
         }     
         @include mobile{        
-            width: 70%;
-            top: 35%;
+            width: 90%;
+            top: 33%;
         }     
         h1{
             font-size: 6.5rem;
             margin-bottom: 0;
+            font-style: italic;
             @include mobile{
                 font-size: 4rem;
             }
@@ -31,6 +32,13 @@
             margin-top: 0;
             font-size: 2.5rem;
             font-weight: 600;
+            span:not(:nth-child(2)){ 
+                background: linear-gradient(160deg, $greenColor, rgb(238, 223, 180));
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                font-weight: 600;
+            }
             @include mobile{             
                 text-wrap: nowrap;
                 font-size: 1.3rem;

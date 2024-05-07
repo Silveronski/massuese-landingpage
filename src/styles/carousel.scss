@@ -83,6 +83,7 @@
                 transform: scale(1.07);
             } 
             @include mobile{
+                margin-top: 0.6rem;
                 font-size: 1.3rem;
                 padding: 5px 45px;
             }                

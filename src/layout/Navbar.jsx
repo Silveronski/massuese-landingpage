@@ -64,6 +64,22 @@ const Navbar = () => {
     return () => document.removeEventListener('touchstart', handleTouch);
 
   },[isNavbarOpen]); 
+  
+
+  useEffect(() => {
+    if (window.innerWidth <= 480) return;
+
+    const scrollWatcher = document.createElement('div');
+    scrollWatcher.setAttribute('data-scroll-watcher', '');
+
+    navbar.current.before(scrollWatcher);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      navbar.current.classList.toggle('sticking', !entries[0].isIntersecting);
+    });
+
+    navObserver.observe(scrollWatcher);
+  },[]);
 
   return (
     <header>

@@ -22,9 +22,9 @@
             display: flex;
             gap: 35px;
             margin-top: 2%;
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: 16px;
-            outline: 1px solid $greenColor;
+            outline: 2px solid $greenColor;
             box-shadow: 0.2px 0.5px 10px rgba(0, 0, 0, 0.745);
             @include tablet{
                 flex-direction: column-reverse;            
@@ -32,7 +32,8 @@
             @include mobile{
                 flex-direction: column-reverse; 
                 gap: 25px; 
-                margin-top: 5%;              
+                margin-top: 5%; 
+                padding: 0.5rem;             
             }
             img{
                 width: 250px;

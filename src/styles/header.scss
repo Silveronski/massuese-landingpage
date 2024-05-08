@@ -10,16 +10,26 @@ header{
         @include mobile{
             display: inline-block;
         }  
-    }   
+    }  
+    .main-navbar.sticking{
+        background-color: rgba($color: $greenColor, $alpha: 0.8500);
+        color: black;
+        margin-top: 0;
+    } 
     .main-navbar{
         position: fixed;
         display: block;
         z-index: 10;
         width: 100%;
-        background-color: rgba($color: $greenColor, $alpha: 0.8500); 
+        background-color: transparent;
         font-family: Rubik;   
+        transition: 0.3s;
+        color: white;
+        margin-top: 0.5%;
         @include mobile{
             background-color: $greenColor;
+            margin-top: 0;
+            color: black;
         }
         @keyframes slideInFromAbove {
             0%{
@@ -64,7 +74,7 @@ header{
                 transition: 0.5s;
                 position: relative;
                 &:hover{
-                    color: rgba(0, 0, 0, 0.632);
+                    color: white;
                 }                        
                 &::after{
                     content: '';
@@ -73,7 +83,7 @@ header{
                     bottom: 5px;
                     height: 3px;
                     width: 100%;
-                    background: rgba(0, 0, 0, 0.551);
+                    background: white;
                     transition: all 0.4s;
                     pointer-events: none;
                     transform: scaleX(0);

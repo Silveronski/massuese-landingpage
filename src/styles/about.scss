@@ -61,7 +61,7 @@
                 margin-right: 2rem;         
                 cursor: pointer;
                 filter: grayscale(1);
-                outline: white 4px solid;             
+                border: white 4px solid;             
                 @include laptop{
                     width: 210px;
                     height: 210px;                                        

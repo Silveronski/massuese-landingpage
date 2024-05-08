@@ -51,7 +51,7 @@
                 outline: 2px solid $greenColor;                
             } 
             &:hover:nth-child(2){              
-                box-shadow: 0vh 35vh 10vh 20vh rgba(255, 255, 255, 0.705);
+                box-shadow: 0vh 35vh 5vh 20vh rgba(255, 255, 255, 0.705);
                 @include laptop{
                     box-shadow: 0vh 55vh 10vh 20vh rgba(255, 255, 255, 0.705);
                 }  
@@ -60,18 +60,18 @@
                 }                                           
             }  
             &:hover:nth-child(3){
-                box-shadow: 0vh 4vh 15vh 25vh rgba(255, 255, 255, 0.705);
+                box-shadow: 0vh 4vh 5vh 25vh rgba(255, 255, 255, 0.705);
                 @include laptop{
-                    box-shadow: 0vh 0vh 15vh 40vh rgba(255, 255, 255, 0.705);
+                    box-shadow: 0vh 0vh 0vh 35vh rgba(255, 255, 255, 0.705);
                 }
                 @include mobile{
                     box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.559);
                 }                    
             } 
             &:hover:nth-child(4){
-                box-shadow: 0vh -25vh 10vh 20vh rgba(255, 255, 255, 0.705);
+                box-shadow: 0vh -17vh 5vh 20vh rgba(255, 255, 255, 0.705);
                 @include laptop{
-                    box-shadow: 0vh -53vh 10vh 20vh rgba(255, 255, 255, 0.705);
+                    box-shadow: 0vh 5vh 10vh 73vh rgba(255, 255, 255, 0.705);
                 }
                 @include mobile{
                     box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.559);

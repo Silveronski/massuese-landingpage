@@ -18,21 +18,38 @@
         h2{      
             margin-top: 7%;
         }
-        .content{
+        .content{      
             display: flex;
             gap: 35px;
-            margin-top: 2%;
+            margin-top: 2.5%;
             padding: 1rem;
             border-radius: 16px;
             outline: 2px solid $greenColor;
             box-shadow: 0.2px 0.5px 10px rgba(0, 0, 0, 0.745);
+            transition: 0.5s;
+            &:hover{
+                scale: 1.0500;
+                background-color: rgba($color: $greenColor, $alpha: 0.9);
+                outline: white 2px solid;
+                @include mobile{
+                    scale: 1.0300;
+                }
+                img{
+                    border-radius: 15%;
+                    scale: 1.03;
+                    filter: grayscale(0);
+                }
+                p{
+                    color: white;
+                }
+            }
             @include tablet{
                 flex-direction: column-reverse;            
             }
             @include mobile{
                 flex-direction: column-reverse; 
                 gap: 25px; 
-                margin-top: 5%; 
+                margin-top: 8%; 
                 padding: 0.5rem;             
             }
             img{
@@ -44,11 +61,7 @@
                 margin-right: 2rem;         
                 cursor: pointer;
                 filter: grayscale(1);
-                &:hover{
-                    border-radius: 15%;
-                    scale: 1.03;
-                    filter: grayscale(0);
-                }
+                outline: white 4px solid;             
                 @include laptop{
                     width: 210px;
                     height: 210px;                                        
@@ -67,6 +80,7 @@
                 padding-right: 2.5rem;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
+                transition: 0.5s;
                 @include laptop{
                     font-size: 1.3rem;
                     padding-left: 2rem;

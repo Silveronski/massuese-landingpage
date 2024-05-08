@@ -9,7 +9,7 @@ import carouselImg from '../assets/images/carouselImg.jpg';
 const CarouselComp = () => {
   return (
     <div className='carousel-container'>
-
+      <div className='gradient'></div>
       <motion.div 
         variants={carouselInfoVariants}
         initial="hidden"
@@ -21,22 +21,21 @@ const CarouselComp = () => {
          onClick={() => window.open(`${content.general.whatsapp}`, "_blank")}>BOOK A VISIT
         </button>
       </motion.div>
-
-      <Carousel>     
-        <Carousel.Item>
-            <motion.img 
-            variants={carouselImgVariants}
-            initial="hidden"
-            animate="show" 
-            src={gallery8}/>                     
+      <Carousel>    
+        <Carousel.Item>      
+          <motion.img 
+          variants={carouselImgVariants}
+          initial="hidden"
+          animate="show" 
+          src={gallery8}/>                     
         </Carousel.Item>
 
         <Carousel.Item>
-            <img src={carouselImg}/>   
+          <img src={carouselImg}/>   
         </Carousel.Item>
 
-        <Carousel.Item>     
-            <img src={gallery7}/>
+        <Carousel.Item>    
+          <img src={gallery7}/>
         </Carousel.Item>
       </Carousel>
 

@@ -70,9 +70,9 @@ const Navbar = () => {
     if (window.innerWidth <= 480) return;
 
     const scrollWatcher = document.createElement('div');
-    scrollWatcher.setAttribute('data-scroll-watcher', '');
+    scrollWatcher.setAttribute('data-scroll-watcher', ''); // sets a custom attribute
 
-    navbar.current.before(scrollWatcher);
+    navbar.current.before(scrollWatcher); // inserts scrollWatcher before the navabr on the DOM
 
     const navObserver = new IntersectionObserver((entries) => {
       navbar.current.classList.toggle('sticking', !entries[0].isIntersecting);
@@ -87,11 +87,11 @@ const Navbar = () => {
         <nav ref={navbar} className='main-navbar'>
             <ul>
                 <li onClick={() => handleNavbarNavigation()} className='navbar-logo'>Jane Doe - Masseuse</li> 
-                <li onClick={() => handleNavbarNavigation(".contact-us-container")}>Contact Us</li>
-                <li onClick={() => handleNavbarNavigation(".my-products-container")}>Products</li>
-                <li onClick={() => handleNavbarNavigation(".services-container")}>Services</li>
+                <li onClick={() => handleNavbarNavigation(".aboutMe-container")}>About</li>
                 <li onClick={() => handleNavbarNavigation(".treatments-container")}>Treatments</li>
-                <li onClick={() => handleNavbarNavigation(".aboutMe-container")}>About</li>                                             
+                <li onClick={() => handleNavbarNavigation(".services-container")}>Services</li>
+                <li onClick={() => handleNavbarNavigation(".my-products-container")}>Products</li>
+                <li onClick={() => handleNavbarNavigation(".contact-us-container")}>Contact Us</li>                                      
             </ul>
         </nav>
     </header>

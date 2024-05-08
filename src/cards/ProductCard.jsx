@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import { productCardsVariants } from '../utils/Variants';
 
-const ProductCard = ({imgUrl, productName, productDescription}) => {
+const ProductCard = ({imgUrl, name, description}) => {
   return (
     <motion.div 
         className='my-product'
         variants={productCardsVariants}>
         <img src={imgUrl} alt=""/>
         <div>
-            <h5>{productName}</h5>
-            <p>{productDescription}</p>         
+            <h5>{name}</h5>
+            <p>{description}</p>         
         </div>          
     </motion.div>
   )

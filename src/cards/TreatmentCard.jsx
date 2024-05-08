@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
 import { treatmentCardsVariants } from '../utils/Variants';
 
-const TreatmentCard = ({ImageUrl, TreatmentName, TreatmentDescreption}) => {
+const TreatmentCard = ({imgUrl, name, description}) => {
   return (
     <motion.div 
         className='treatment-card'
         variants={treatmentCardsVariants}>
-        <img src={ImageUrl} alt=""/>
-        <h4>{TreatmentName}</h4>
-        <p>{TreatmentDescreption}</p>
+        <img src={imgUrl} alt=""/>
+        <h4>{name}</h4>
+        <p>{description}</p>
     </motion.div>
   )
 }

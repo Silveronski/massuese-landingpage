@@ -45,10 +45,11 @@
             width: 75%; 
             transition: 0.5s; 
             border-radius: 16px;
+            border: 2px solid white;
             &:hover{
                 transform: scale(1.0300);
                 z-index: 100;   
-                outline: 2px solid $greenColor;                
+                border-color: $greenColor;                
             } 
             &:hover:nth-child(2){              
                 box-shadow: 0vh 35vh 5vh 20vh rgba(255, 255, 255, 0.705);

@@ -6,7 +6,9 @@ import TreatmentCard from '../cards/TreatmentCard';
 import { motion } from 'framer-motion';
 import { staggerChildrenVariants } from '../utils/Variants';
 import useResizeWindowListener from '../hooks/useResizeWindowListener';
-import content from '../site-content-json/content.json';
+import useCardCreator from '../hooks/useCardCreator';
+
+const treatmentsArray = useCardCreator(TreatmentCard, 'treatments', [sweden, rekamot, oils, face]);
 
 const Treatments = () => {
 
@@ -22,23 +24,7 @@ const Treatments = () => {
         <h3 className='section-headline'><span>Treatment</span> <span>Types</span></h3>
         <div className='treatments-wrapper'>          
           <hr />
-
-          <TreatmentCard ImageUrl={sweden} TreatmentName={content.treatments.firstTreatment.name}
-            TreatmentDescreption={content.treatments.firstTreatment.description}
-          />
-            
-          <TreatmentCard ImageUrl={rekamot} TreatmentName={content.treatments.secondTreatment.name}
-           TreatmentDescreption={content.treatments.secondTreatment.description}      
-          />
-
-          <TreatmentCard ImageUrl={oils} TreatmentName={content.treatments.thirdTreatment.name}
-            TreatmentDescreption={content.treatments.thirdTreatment.description}                  
-          />
-
-          <TreatmentCard ImageUrl={face} TreatmentName={content.treatments.forthTreatment.name}
-           TreatmentDescreption={content.treatments.forthTreatment.description}                    
-          />
-
+          {treatmentsArray}
         </div>
       </motion.section> 
   )

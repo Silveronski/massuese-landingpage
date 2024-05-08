@@ -1,11 +1,11 @@
-const ServiceCard = ({imgUrl, serviceName, serviceDescription}) => {
+const ServiceCard = ({imgUrl, name, description}) => {
   return (
     <div className='service-card'>
         <div className="img-container">
           <img src={imgUrl} alt=""/>
         </div>  
-        <h4>{serviceName}</h4>
-        <p>{serviceDescription}</p>   
+        <h4>{name}</h4>
+        <p>{description}</p>   
     </div>
   )
 }

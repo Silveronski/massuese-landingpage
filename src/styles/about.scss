@@ -24,13 +24,13 @@
             margin-top: 2.5%;
             padding: 1rem;
             border-radius: 16px;
-            outline: 2px solid $greenColor;
+            border: 2px solid $greenColor;
             box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.559); 
             transition: 0.5s;
             &:hover{
                 scale: 1.0500;
                 background-color: rgba($color: $greenColor, $alpha: 0.9);
-                outline: white 2px solid;
+                border-color: white;
                 @include mobile{
                     scale: 1.0300;
                 }

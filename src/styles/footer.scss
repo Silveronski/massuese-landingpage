@@ -12,9 +12,7 @@ footer{
             height: 800px;
             margin-top: 5rem;            
         }
-        @include laptop{
-            height: 40vh;
-        }
+        @include laptop { height: 40vh; }              
         .contact-us-wrapper{
             padding-top: 1%;
             width: 75%;
@@ -62,9 +60,7 @@ footer{
                     }
                 }
                 @include mobile{
-                    h5{
-                        margin-top: 5%;
-                    }
+                    h5 { margin-top: 5%; }                                         
                 }
             }   
             div:nth-child(2){

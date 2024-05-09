@@ -36,9 +36,7 @@ body{
         span:nth-child(2){
             color: $greenColor;
         }
-        @include mobile{
-            font-size: 2.7rem;
-        }
+        @include mobile { font-size: 2.7rem; }             
     }
 
     p{

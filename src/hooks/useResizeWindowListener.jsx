@@ -7,6 +7,8 @@ const useResizeWindowListener = ({mobileMargin, tabletMargin, laptopMargin, desk
     useEffect(() => {
         const handleResize = () => {
             setViewportMargin(calculateMargin(mobileMargin, tabletMargin, laptopMargin, desktopMargin));
+            if (window.innerWidth > 648) document.querySelector('header .main-navbar').style.display = 'block';
+            else document.querySelector('header .main-navbar').style.display = 'none';
         }
 
         handleResize();

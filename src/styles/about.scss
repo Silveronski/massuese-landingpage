@@ -5,16 +5,9 @@
     font-family: Rubik;        
     .aboutMe-wrapper{
         width: 60%;
-        @include laptop{
-            width: 80%;
-        }
-        @include tablet{
-            width: 90%;              
-        }
-        @include mobile{
-            width: 93%;              
-        }
-        
+        @include laptop { width: 80%; }               
+        @include tablet { width: 90%; }                            
+        @include mobile { width: 93%; }                                     
         h2{      
             margin-top: 7%;
         }
@@ -31,21 +24,15 @@
                 scale: 1.0500;
                 background-color: rgba($color: $greenColor, $alpha: 0.9);
                 border-color: white;
-                @include mobile{
-                    scale: 1.0300;
-                }
+                @include mobile { scale: 1.0300; }                           
                 img{
                     border-radius: 15%;
                     scale: 1.03;
                     filter: grayscale(0);
                 }
-                p{
-                    color: white;
-                }
+                p { color: white; }                             
             }
-            @include tablet{
-                flex-direction: column-reverse;            
-            }
+            @include tablet{ flex-direction: column-reverse; }                        
             @include mobile{
                 flex-direction: column-reverse; 
                 gap: 25px; 

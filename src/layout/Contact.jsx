@@ -28,25 +28,25 @@ const Contact = () => {
             <ul>
               <li>
                 <a href={content.general.whatsapp} target="_blank">Whatsapp</a>
-                <img src={whatsapp} alt="" 
+                <img src={whatsapp} alt="" loading='lazy' role='presentation' 
                   onClick={() => window.open(`${content.general.whatsapp}`, "_blank")} /> 
               </li>
 
               <li>
                 <a href={content.general.instagram} target="_blank">Instagram</a>
-                <img src={instagram} alt=""
+                <img src={instagram} alt="" loading='lazy' role='presentation'
                   onClick={() => window.open(`${content.general.instagram}`, "_blank")}/>
               </li>
 
               <li>
                 <a href={content.general.facebook} target="_blank">Facebook</a>
-                <img src={facebook} alt=""
+                <img src={facebook} alt="" loading='lazy' role='presentation'
                   onClick={() => window.open(`${content.general.facebook}`, "_blank")}/>
               </li>
 
               <li>
                 <a href={content.general.email}>Email</a>
-                <img src={gmail} alt=""
+                <img src={gmail} alt="" loading='lazy' role='presentation'
                   onClick={() => window.open(`${content.general.email}`, "_blank")}/>
               </li>
             </ul>

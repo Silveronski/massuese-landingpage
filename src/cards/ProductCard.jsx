@@ -6,7 +6,7 @@ const ProductCard = ({imgUrl, name, description}) => {
     <motion.div 
         className='my-product'
         variants={productCardsVariants}>
-        <img src={imgUrl} alt=""/>
+        <img src={imgUrl} alt="product image" loading='lazy'/>
         <div>
             <h5>{name}</h5>
             <p>{description}</p>         

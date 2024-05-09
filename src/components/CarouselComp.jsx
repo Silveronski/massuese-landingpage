@@ -24,6 +24,8 @@ const CarouselComp = () => {
       <Carousel>    
         <Carousel.Item>      
           <motion.img 
+          loading='lazy'
+          role='presentation'
           variants={carouselImgVariants}
           initial="hidden"
           animate="show" 
@@ -31,11 +33,11 @@ const CarouselComp = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <img src={carouselImg}/>   
+          <img src={carouselImg} loading='lazy' role='presentation'/>   
         </Carousel.Item>
 
         <Carousel.Item>    
-          <img src={gallery7}/>
+          <img src={gallery7} loading='lazy' role='presentation'/>
         </Carousel.Item>
       </Carousel>
 

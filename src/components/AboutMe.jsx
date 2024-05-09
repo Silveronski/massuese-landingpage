@@ -20,7 +20,7 @@ const AboutMe = () => {
           <hr/>
           <div className='content'>
             <p>{content.aboutMe.paragraph}</p>
-            <img src={closeUp} alt=""/>
+            <img src={closeUp} alt="" loading='lazy' role='presentation'/>
           </div>
         </motion.div>
       </section>

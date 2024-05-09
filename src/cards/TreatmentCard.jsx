@@ -6,7 +6,7 @@ const TreatmentCard = ({imgUrl, name, description}) => {
     <motion.div 
         className='treatment-card'
         variants={treatmentCardsVariants}>
-        <img src={imgUrl} alt=""/>
+        <img src={imgUrl} alt="" loading='lazy'/>
         <h4>{name}</h4>
         <p>{description}</p>
     </motion.div>

@@ -11,14 +11,13 @@ header{
             display: inline-block;
         }  
     }
-    .hamburger.open{
-        animation: slideInFromAbove 0.3s ease;
-    }  
     .main-navbar.sticking{
         background-color: rgba($color: $greenColor, $alpha: 0.8500);
         color: black;
         margin-top: 0;
-        box-shadow: 0.5px 1px 14px rgba(0, 0, 0, 0.5);
+        box-shadow: 0.5px 1px 14px rgba(0, 0, 0, 0.5); 
+        &:hover li{ color: black; }       
+        &:hover li::after{ background: black; }           
     } 
     .main-navbar{
         position: fixed;
@@ -36,20 +35,12 @@ header{
             color: black;
         }
         @keyframes slideInFromAbove {
-            0%{
-                top: -100%;
-            }
-            100%{
-                top: 0%;
-            }
+            0% { top: -100%; }         
+            100% { top: 0%; }                         
         } 
         @keyframes slideInFromDown {
-            0%{
-                top: 0%;
-            }
-            100%{
-                top: -100%;
-            }
+            0% { top: 0%; }          
+            100% { top: -100%; }                        
         } 
         @include mobile{
             display: none;        
@@ -78,9 +69,7 @@ header{
                 font-size: 1.7rem;
                 transition: 0.5s;
                 position: relative;
-                &:hover{
-                    color: white;
-                }                        
+                &:hover { color: white; }                                 
                 &::after{
                     content: '';
                     position: absolute;
@@ -93,15 +82,9 @@ header{
                     pointer-events: none;
                     transform: scaleX(0);
                 }
-                &:hover::after{
-                    transform: scaleX(1);
-                }
-                @include laptop{
-                    font-size: 1.4rem;
-                } 
-                @include tablet {
-                    font-size: 1.4rem;
-                } 
+                &:hover::after { transform: scaleX(1); }           
+                @include laptop { font-size: 1.4rem; }          
+                @include tablet { font-size: 1.4rem; }                          
                 @include mobile{
                     padding: 1px;                
                     text-align: center;
@@ -112,9 +95,7 @@ header{
                 @media screen and (min-width: 482px) and (max-width: 880px){
                     font-size: 0.9rem;
                 }
-                &:last-child{
-                    margin-right: 1%;
-                }                                                   
+                &:last-child { margin-right: 1%;}                                                                 
             } 
             .navbar-logo{
                 margin-right: auto;

@@ -6,9 +6,7 @@
     justify-content: center;  
     font-family: Rubik;     
     h3{
-        @include mobile{
-            margin-bottom: 10px;           
-        }
+        @include mobile{ margin-bottom: 10px; }                          
     }
     hr{
         width: 80%;
@@ -21,15 +19,9 @@
         width: 80%;
         display: flex;
         gap: 20px;
-        @include laptop{
-            width: 95%;
-        }
-        @include tablet{
-            width: 95%;
-        }
-        @include mobile{
-            flex-direction: column;
-        }
+        @include laptop { width: 95%; }                
+        @include tablet { width: 95%; }              
+        @include mobile { flex-direction: column; width: 95%; }        
         .service-card{    
             margin-top: 3vh;
             display: flex;
@@ -37,18 +29,12 @@
             align-items: center;
             transition: 0.5s;   
             &:nth-child(2){
-                p{
-                    border-radius: 43% 57% 61% 39% / 34% 31% 69% 66% ;
-                }             
+                p { border-radius: 43% 57% 61% 39% / 34% 31% 69% 66%; }                    
             } 
             &:nth-child(3){  
-                p{
-                    border-radius: 27% 73% 21% 79% / 11% 53% 47% 89%;
-                }                          
+                p { border-radius: 27% 73% 21% 79% / 11% 53% 47% 89%; }                                    
             }  
-            &:hover{
-                transform: scale(1.02);                  
-            }
+            &:hover{ transform: scale(1.02); }                                 
             &:hover .img-container::before {              
                 transform: scaleX(1);
             }
@@ -56,15 +42,9 @@
                 position: relative;
                 width: 9.6em;
                 margin-bottom: 1vh;
-                @include laptop{
-                    width: 9vw;
-                }
-                @include tablet{
-                    width: 12vw;
-                }
-                @include mobile{
-                    width: 35vw;
-                }
+                @include laptop { width: 9vw; }                              
+                @include tablet { width: 12vw; }                                   
+                @include mobile { width: 35vw; }                                   
                 &::before{
                     content: '';
                     position: absolute;
@@ -84,19 +64,13 @@
                         width: 9vw;
                         padding-bottom: 1.8vh; 
                     }
-                    @include tablet{
-                        width: 12vw;
-                    }
-                    @include mobile{
-                        width: 35vw;
-                    }
+                    @include tablet { width: 12vw; }                                        
+                    @include mobile { width: 35vw; }                                       
                 }
             }         
             h4{
                 font-size: 1.8rem;
-                @include tablet{
-                    font-size: 1.6rem;
-                }
+                @include tablet{ font-size: 1.6rem; }                               
             }
             p{
                 padding-block: 1.5rem; 
@@ -110,9 +84,7 @@
                     padding-right: 0.8rem;
                     font-size: 1.1rem;
                 }
-                @include mobile{
-                    padding: 0;
-                }
+                @include mobile{ padding: 0; }                               
             }
         }       
     }

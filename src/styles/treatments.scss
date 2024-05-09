@@ -17,15 +17,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        @include laptop{
-            width: 85%;           
-        }
-        @include tablet{
-            width: 95%;
-        }
-        @include mobile{
-            width: 100%;                       
-        }
+        @include laptop { width: 85%; }                              
+        @include tablet { width: 95%; }              
+        @include mobile { width: 100%; }                                      
         hr{
             width: 100%;
             color: black;
@@ -74,9 +68,7 @@
                     background-color: white;
                     color: $greenColor;                       
                 }
-                p,h4{
-                    transform: scale(1.03);                     
-                }
+                p,h4 { transform: scale(1.03); }                                                    
             }
             &::after{
                 content: "";

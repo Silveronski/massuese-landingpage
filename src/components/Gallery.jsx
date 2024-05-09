@@ -16,7 +16,7 @@ const Gallery = () => {
             viewport={{amount: "some", once: true, margin: viewportMargin}}>
             <div className='gallery-wrapper'>
             {[...Array(9)].map((_, index) => (
-                <img key={index} src={ImgUrls[index]} alt=""/>
+                <img key={index} src={ImgUrls[index]} alt="" loading='lazy' role='presentation'/>
             ))}
             </div>
         </motion.section>

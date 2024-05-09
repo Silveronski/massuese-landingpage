@@ -38,12 +38,12 @@
             transition: 0.5s;   
             &:nth-child(2){
                 p{
-                    border-radius: 53% 47% 47% 53% / 21% 21% 79% 79% ;
+                    border-radius: 43% 57% 61% 39% / 34% 31% 69% 66% ;
                 }             
             } 
             &:nth-child(3){  
                 p{
-                    border-radius: 41% 59% 34% 66% / 23% 47% 53% 77% ;            
+                    border-radius: 27% 73% 21% 79% / 11% 53% 47% 89%;
                 }                          
             }  
             &:hover{
@@ -79,9 +79,10 @@
                 img{
                     position: relative;
                     width: 9.6em;            
-                    padding-bottom: 1.8vh;       
+                    padding-bottom: 1.2vh;       
                     @include laptop{
                         width: 9vw;
+                        padding-bottom: 1.8vh; 
                     }
                     @include tablet{
                         width: 12vw;
@@ -97,11 +98,11 @@
                     font-size: 1.6rem;
                 }
             }
-            p{                            
+            p{
+                padding-block: 1.5rem; 
+                padding-inline: 2rem;                           
                 text-align: center;
                 font-size: 1.2rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
                 background-color: rgba($color: $greenColor, $alpha: 0.3);
                 border-radius: 73% 27% 79% 21% / 53% 11% 89% 47% ;            
                 @include tablet{

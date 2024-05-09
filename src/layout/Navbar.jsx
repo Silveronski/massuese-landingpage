@@ -28,7 +28,7 @@ const Navbar = () => {
   const closeNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
     setImgSrc(hamburger);
-    navbar.current.style.animation = "slideInFromDown 0.9s ease"; 
+    navbar.current.style.animation = "slideInFromDown 0.3s ease"; 
     navbar.current.addEventListener("animationend", onAnimationEnd);     
   }
 

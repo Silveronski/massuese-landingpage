@@ -74,7 +74,7 @@
                     background-color: white;
                     color: $greenColor;                       
                 }
-                p{
+                p,h4{
                     transform: scale(1.03);                     
                 }
             }
@@ -108,6 +108,7 @@
                 text-align: center;
                 font-size: 1.7rem;
                 margin-bottom: -6px;
+                transition: 0.3s; 
             }
             p{
                 text-align: center;

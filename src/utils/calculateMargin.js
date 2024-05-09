@@ -1,14 +1,7 @@
 export const calculateMargin = (mobileMargin, tabletMargin, laptopMargin, desktopMargin) => {
-  if (window.innerWidth <= 480) {
-    return `${mobileMargin}%`;
-  }
-  else if (window.innerWidth > 480 && window.innerWidth <= 1025) {
-    return `${tabletMargin}%`;
-  }
-  else if (window.innerWidth > 1025 && window.innerWidth <= 1540) {
-    return `${laptopMargin}%`;
-  }
-  else {
-    return `${desktopMargin}%`;
-  }
+  const width = window.innerWidth;
+  if (width <= 480) return `${mobileMargin}%`;
+  if (width <= 1025) return `${tabletMargin}%`;
+  if (width <= 1540) return `${laptopMargin}%`;
+  return `${desktopMargin}%`;
 }

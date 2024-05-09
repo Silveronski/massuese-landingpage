@@ -1,6 +1,8 @@
 $greenColor:#f7b251;
 $lightBlack:rgb(57, 56, 56);
 $grayish: rgb(93, 92, 92);
+$carouselBackground: linear-gradient(to top, rgba($greenColor, 0.4), rgba(0, 0, 0, 0.8));
+$carouselBackgroundMobile: linear-gradient(to bottom, rgba($greenColor, 0.4), rgba(0, 0, 0, 0.8));
 
 @mixin mobile{
     @media screen and (max-width: 648px) {

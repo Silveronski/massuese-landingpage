@@ -20,6 +20,7 @@
     .services-wrapper{
         width: 80%;
         display: flex;
+        gap: 20px;
         @include laptop{
             width: 95%;
         }
@@ -29,12 +30,22 @@
         @include mobile{
             flex-direction: column;
         }
-        .service-card{
+        .service-card{    
             margin-top: 3vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: 0.5s;      
+            transition: 0.5s;   
+            &:nth-child(2){
+                p{
+                    border-radius: 53% 47% 47% 53% / 21% 21% 79% 79% ;
+                }             
+            } 
+            &:nth-child(3){  
+                p{
+                    border-radius: 41% 59% 34% 66% / 23% 47% 53% 77% ;            
+                }                          
+            }  
             &:hover{
                 transform: scale(1.02);                  
             }
@@ -88,9 +99,11 @@
             }
             p{                            
                 text-align: center;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 padding-left: 2rem;
                 padding-right: 2rem;
+                background-color: rgba($color: $greenColor, $alpha: 0.3);
+                border-radius: 73% 27% 79% 21% / 53% 11% 89% 47% ;            
                 @include tablet{
                     padding-left: 0.8rem;
                     padding-right: 0.8rem;

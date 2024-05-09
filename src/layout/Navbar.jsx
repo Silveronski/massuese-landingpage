@@ -5,32 +5,30 @@ import hamburger from '../assets/images/hamburger.png';
 const Navbar = () => {
 
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [imgSrc, setImgSrc] = useState(hamburger);
   const navbar = useRef();
   const imgRef = useRef();
 
   const handleHamburgerClick = () => {
     if (navbar.current.style.animation !== "") return;
+    if (isNavbarOpen) closeNavbar();     
+    else openNavbar();       
+  }
 
-    if (isNavbarOpen) {
-      closeNavbar();
-    }  
-    else {
-      setIsNavbarOpen(!isNavbarOpen);
-      navbar.current.style.animation = "slideInFromAbove 0.3s ease";
-      navbar.current.style.display = 'block';
-      imgRef.current.src = close; 
-      imgRef.current.style.width = '35px';
-      setTimeout(() => {
-        navbar.current.style.animation = "";
-      }, 550);      
-    }
+  const openNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+    setImgSrc(close);
+    navbar.current.style.animation = "slideInFromAbove 0.3s ease";
+    navbar.current.style.display = 'block'; 
+    setTimeout(() => {
+      navbar.current.style.animation = "";
+    }, 550);
   }
 
   const closeNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
-    imgRef.current.src = hamburger;
-    imgRef.current.style.width = '45px'; 
-    navbar.current.style.animation = "slideInFromDown 0.3s ease"; 
+    setImgSrc(hamburger);
+    navbar.current.style.animation = "slideInFromDown 0.9s ease"; 
     navbar.current.addEventListener("animationend", onAnimationEnd);     
   }
 
@@ -59,10 +57,8 @@ const Navbar = () => {
           closeNavbar();
       }
     }
-
     document.addEventListener('touchstart', handleTouch);
     return () => document.removeEventListener('touchstart', handleTouch);
-
   },[isNavbarOpen]); 
   
 
@@ -70,7 +66,7 @@ const Navbar = () => {
     if (window.innerWidth <= 480) return;
 
     const scrollWatcher = document.createElement('div');
-    scrollWatcher.setAttribute('data-scroll-watcher', ''); // sets a custom attribute
+    scrollWatcher.setAttribute('data-scroll-watcher', ''); // sets a custom attribute to add info to this element
 
     navbar.current.before(scrollWatcher); // inserts scrollWatcher before the navabr on the DOM
 
@@ -83,7 +79,7 @@ const Navbar = () => {
 
   return (
     <header>
-        <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={hamburger} alt=""/> 
+        <img ref={imgRef} onClick={handleHamburgerClick} className='hamburger' src={imgSrc} alt="mobile menu icon"/> 
         <nav ref={navbar} className='main-navbar'>
             <ul>
                 <li onClick={() => handleNavbarNavigation()} className='navbar-logo'>Jane Doe - Masseuse</li> 

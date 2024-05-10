@@ -69,7 +69,9 @@ header{
                 font-size: 1.7rem;
                 transition: 0.5s;
                 position: relative;
-                &:hover { color: white; }                                 
+                &:hover { 
+                    color: white;                   
+                }                                 
                 &::after{
                     content: '';
                     position: absolute;
@@ -81,6 +83,7 @@ header{
                     transition: all 0.4s;
                     pointer-events: none;
                     transform: scaleX(0);
+                    @include mobile { display: none; }                                       
                 }
                 &:hover::after { transform: scaleX(1); }           
                 @include laptop { font-size: 1.4rem; }          

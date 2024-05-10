@@ -14,6 +14,7 @@
         align-items: center;
         width: 80%;
         margin-top: 0.3%;
+        @media screen and (max-width: 1920px) { width: 90%; }
         @include laptop{ width: 90%; }               
         @include tablet{ width: 100%; }                           
         @include mobile{ width: 100%; }                
@@ -74,26 +75,13 @@
             }   
                 
             &:nth-child(odd){
-                div{
-                    margin-left: 3%;
-                }
-                img{
-                    &:hover{
-                        rotate: 10deg;
-                    }
-                }
-
-                @include mobile{                       
-                    flex-direction: column;
-                } 
                 flex-direction: row-reverse;
+                &:hover img { rotate: 10deg; }
+                @include mobile { flex-direction: column; }                                                  
+                div { margin-left: 3%; }                                                                                                                                         
             }
-            &:nth-child(even){
-                img{
-                    &:hover{
-                        rotate: -10deg;
-                    }
-                }
+            &:nth-child(even){        
+                &:hover img { rotate: -10deg; }                                             
             }
             div{
                 display: flex;
@@ -122,10 +110,7 @@
                 margin: auto 1.5rem;
                 padding: 2rem;
                 transition: 1s;
-                @include mobile{                       
-                    height: auto;
-                    align-self: center;
-                }                  
+                align-self: center;                               
             }           
         }
     }

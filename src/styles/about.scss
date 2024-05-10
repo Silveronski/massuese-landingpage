@@ -5,6 +5,7 @@
     font-family: Rubik;        
     .aboutMe-wrapper{
         width: 60%;
+        @media screen and (max-width: 1920px) { width: 75%; }             
         @include laptop { width: 80%; }               
         @include tablet { width: 90%; }                            
         @include mobile { width: 93%; }                                     

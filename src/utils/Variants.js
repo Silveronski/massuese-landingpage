@@ -15,15 +15,15 @@ export const carouselImgVariants = {
 export const carouselInfoVariants = {
     hidden: {
       opacity: 0,
-      y: '20%',
+      scale: 0.9,
       x: '-50%',
     }, 
     show:{
       opacity: 1,
-      y: '0%', 
+      scale: 1,
       x: '-50%',
       transition: {
-        duration: 0.6,
+        duration: 0.7,
         delay: 0.8,
         ease: [0.5, 0.71, 0.6, 1.01]
       }

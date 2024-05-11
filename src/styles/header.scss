@@ -1,3 +1,16 @@
+@keyframes slideInFromAbove {
+    0% { top: -100%; }         
+    100% { top: 0%; }                         
+} 
+@keyframes slideInFromDown {
+    0% { top: 0%; }          
+    100% { top: -100%; }                        
+} 
+@keyframes navbarSticking {
+    0% { top: -15%; }          
+    100% { top: 0%; }                        
+} 
+
 header{
     .hamburger{
         display: none;
@@ -12,12 +25,13 @@ header{
         }  
     }
     .main-navbar.sticking{
-        background-color: rgba($color: $greenColor, $alpha: 0.8500);
+        background-color: $navbarColor;
         color: black;
         margin-top: 0;
         box-shadow: 0.5px 1px 14px rgba(0, 0, 0, 0.5); 
+        animation: navbarSticking 0.6s;
         &:hover li{ color: black; }       
-        &:hover li::after{ background: black; }           
+        &:hover li::after{ background: black; }          
     } 
     .main-navbar{
         position: fixed;
@@ -34,14 +48,6 @@ header{
             margin-top: 0;
             color: black;
         }
-        @keyframes slideInFromAbove {
-            0% { top: -100%; }         
-            100% { top: 0%; }                         
-        } 
-        @keyframes slideInFromDown {
-            0% { top: 0%; }          
-            100% { top: -100%; }                        
-        } 
         @include mobile{
             display: none;        
             box-shadow: 0.5px 0.5px 5px black;

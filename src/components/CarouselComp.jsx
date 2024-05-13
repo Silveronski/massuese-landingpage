@@ -40,7 +40,6 @@ const CarouselComp = () => {
           <img src={gallery7} loading='lazy' role='presentation'/>
         </Carousel.Item>
       </Carousel>
-
     </div>
   )
 }

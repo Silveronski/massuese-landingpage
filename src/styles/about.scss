@@ -22,16 +22,15 @@
             box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.559); 
             transition: 0.5s;
             &:hover{
+                border-color: white;
                 scale: 1.0500;
                 background-color: rgba($color: $greenColor, $alpha: 0.9);
-                border-color: white;
                 @include mobile { scale: 1.0300; }                           
                 img{
                     border-radius: 15%;
                     scale: 1.03;
                     filter: grayscale(0);
-                }
-                p { color: white; }                             
+                }                             
             }
             @include tablet{ flex-direction: column-reverse; }                        
             @include mobile{
